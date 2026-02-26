@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for former SMIL animations */
+@keyframes kf-geri-1 {
+  0.000% { transform: translate(0px, 0px); }
+  50.000% { transform: translate(-3px, 0px); }
+  100.000% { transform: translate(0px, 0px); }
+}
+.fx-geri-1 { animation: kf-geri-1 1s ease-in-out 0s infinite; transform-box: fill-box; }
+</style><line x1="19" y1="12" x2="5" y2="12" /><polyline points="12 19 5 12 12 5" class="fx-geri-1" />
+</svg>

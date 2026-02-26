@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>@keyframes kfKartSatir1 {
+  0%, 45%, 100% { opacity: 1; }
+  55%, 80% { opacity: 0; }
+}
+@keyframes kfKartSatir2 {
+  0%, 35%, 100% { opacity: 1; }
+  45%, 70% { opacity: 0; }
+}
+.fx-kart-s1 { animation: kfKartSatir1 1.8s steps(1, end) infinite; }
+.fx-kart-s2 { animation: kfKartSatir2 1.8s steps(1, end) infinite; }
+</style><rect x="1" y="4" width="22" height="16" rx="2" ry="2" /><line x1="1" y1="10" x2="23" y2="10" /><line x1="4" y1="14" x2="12" y2="14" class="fx-kart-s1" /><line x1="4" y1="17" x2="8" y2="17" class="fx-kart-s2" />
+</svg>

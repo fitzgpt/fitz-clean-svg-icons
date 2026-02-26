@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for stroke-dashoffset animation */
+.fx-arama-legacy-1 { animation: fitzDashArama1 1.7s ease-in-out infinite; animation-delay: 0s; }
+@keyframes fitzDashArama1 {
+  0.000% { stroke-dashoffset: 50; }
+  50.000% { stroke-dashoffset: 0; }
+  100.000% { stroke-dashoffset: 50; }
+}
+.fx-arama-legacy-2 { animation: fitzDashArama2 1.7s ease-in-out infinite; animation-delay: 0.15s; }
+@keyframes fitzDashArama2 {
+  0.000% { stroke-dashoffset: 7; }
+  50.000% { stroke-dashoffset: 0; }
+  100.000% { stroke-dashoffset: 7; }
+}
+</style><circle cx="11" cy="11" r="8" stroke-dasharray="50" stroke-dashoffset="50" class="fx-arama-legacy-1" /><line x1="21" y1="21" x2="16.65" y2="16.65" stroke-dasharray="7" stroke-dashoffset="7" class="fx-arama-legacy-2" />
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for former SMIL animations */
+@keyframes kf-wifi-1 {
+  0.000% { opacity: 0.3; }
+  50.000% { opacity: 1; }
+  100.000% { opacity: 0.3; }
+}
+.fx-wifi-1 { animation: kf-wifi-1 1.5s ease-in-out 0s infinite; }
+
+@keyframes kf-wifi-2 {
+  0.000% { opacity: 0.3; }
+  50.000% { opacity: 1; }
+  100.000% { opacity: 0.3; }
+}
+.fx-wifi-2 { animation: kf-wifi-2 1.5s ease-in-out 0.2s infinite; }
+
+@keyframes kf-wifi-3 {
+  0.000% { opacity: 0.3; }
+  50.000% { opacity: 1; }
+  100.000% { opacity: 0.3; }
+}
+.fx-wifi-3 { animation: kf-wifi-3 1.5s ease-in-out 0.4s infinite; }
+
+@keyframes kf-wifi-4 {
+  0.000% { r: 1; }
+  50.000% { r: 1.5; }
+  100.000% { r: 1; }
+}
+.fx-wifi-4 { animation: kf-wifi-4 1s ease-in-out 0s infinite; }
+</style><path d="M5 12.55a11 11 0 0 1 14.08 0" stroke-dasharray="20" class="fx-wifi-1" /><path d="M1.42 9a16 16 0 0 1 21.16 0" stroke-dasharray="25" class="fx-wifi-2" /><path d="M8.53 16.11a6 6 0 0 1 6.95 0" stroke-dasharray="12" class="fx-wifi-3" /><circle cx="12" cy="20" r="1" fill="currentColor" stroke="none" class="fx-wifi-4" />
+</svg>

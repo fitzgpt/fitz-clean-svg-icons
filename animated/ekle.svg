@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for stroke-dashoffset animation */
+.fx-ekle-legacy-1 { animation: fitzDashEkle1 2s ease-in-out infinite; animation-delay: 0s; }
+@keyframes fitzDashEkle1 {
+  0.000% { stroke-dashoffset: 14; }
+  25.000% { stroke-dashoffset: 0; }
+  50.000% { stroke-dashoffset: 0; }
+  75.000% { stroke-dashoffset: 14; }
+  100.000% { stroke-dashoffset: 14; }
+}
+.fx-ekle-legacy-2 { animation: fitzDashEkle2 2s ease-in-out infinite; animation-delay: 0.2s; }
+@keyframes fitzDashEkle2 {
+  0.000% { stroke-dashoffset: 14; }
+  25.000% { stroke-dashoffset: 0; }
+  50.000% { stroke-dashoffset: 0; }
+  75.000% { stroke-dashoffset: 14; }
+  100.000% { stroke-dashoffset: 14; }
+}
+</style><line x1="12" y1="5" x2="12" y2="19" stroke-dasharray="14" class="fx-ekle-legacy-1" stroke-dashoffset="14" /><line x1="5" y1="12" x2="19" y2="12" stroke-dasharray="14" class="fx-ekle-legacy-2" stroke-dashoffset="14" />
+</svg>

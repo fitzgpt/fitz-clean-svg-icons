@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for former SMIL animations */
+@keyframes kf-yildiz-1 {
+  0.000% { transform: rotate(0deg); }
+  33.333% { transform: rotate(10deg); }
+  66.667% { transform: rotate(-10deg); }
+  100.000% { transform: rotate(0deg); }
+}
+.fx-yildiz-1 { animation: kf-yildiz-1 2s ease-in-out 0s infinite; transform-box: fill-box; }
+
+@keyframes kf-yildiz-2 {
+  0.000% { opacity: 0; }
+  30.000% { opacity: 0.4; }
+  60.000% { opacity: 0; }
+  100.000% { opacity: 0; }
+}
+.fx-yildiz-2 { animation: kf-yildiz-2 1.5s ease-in-out 0s infinite; }
+</style><g style="transform-origin: 12px 12px" class="fx-yildiz-1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></g><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor" stroke="none" class="fx-yildiz-2" />
+</svg>

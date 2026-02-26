@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for former SMIL animations */
+@keyframes kf-kaydet-1 {
+  0.000% { opacity: 0; }
+  25.000% { opacity: 0; }
+  50.000% { opacity: 1; }
+  75.000% { opacity: 1; }
+  100.000% { opacity: 0; }
+}
+.fx-kaydet-1 { animation: kf-kaydet-1 2s ease-in-out 0s infinite; }
+
+@keyframes kf-kaydet-2 {
+  0.000% { transform: scale(1); }
+  25.000% { transform: scale(0.9); }
+  50.000% { transform: scale(1.05); }
+  75.000% { transform: scale(1); }
+  100.000% { transform: scale(1); }
+}
+.fx-kaydet-2 { animation: kf-kaydet-2 2s ease-in-out 0s infinite; transform-box: fill-box; }
+</style><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" /><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" fill="currentColor" stroke="none" class="fx-kaydet-1" /><g style="transform-origin: 12px 12px" class="fx-kaydet-2" />
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<style>@keyframes kfAnaKapi {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.fx-ana-kapi { animation: kfAnaKapi 1.5s ease-in-out infinite; }
+</style><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /><rect x="9" y="12" width="6" height="10" fill="currentColor" stroke="none" class="fx-ana-kapi" />
+</svg>

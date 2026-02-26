@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for former SMIL animations */
+@keyframes kf-bilgi-1 {
+  0.000% { y2: 12; }
+  50.000% { y2: 8; }
+  100.000% { y2: 12; }
+}
+.fx-bilgi-1 { animation: kf-bilgi-1 1.5s ease-in-out 0s infinite; }
+
+@keyframes kf-bilgi-2 {
+  0.000% { opacity: 1; }
+  50.000% { opacity: 0.3; }
+  100.000% { opacity: 1; }
+}
+.fx-bilgi-2 { animation: kf-bilgi-2 1s ease-in-out 0s infinite; }
+</style><circle cx="12" cy="12" r="10" /><line x1="12" y1="16" x2="12" y2="12" class="fx-bilgi-1" /><circle cx="12" cy="8" r="1" fill="currentColor" stroke="none" class="fx-bilgi-2" />
+</svg>

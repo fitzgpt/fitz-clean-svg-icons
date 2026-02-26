@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for former SMIL animations */
+@keyframes kf-kalp-1 {
+  0.000% { transform: scale(1); }
+  25.000% { transform: scale(0.8); }
+  50.000% { transform: scale(1.1); }
+  75.000% { transform: scale(1); }
+  100.000% { transform: scale(1); }
+}
+.fx-kalp-1 { animation: kf-kalp-1 2s ease-in-out 0s infinite; transform-box: fill-box; }
+
+@keyframes kf-kalp-2 {
+  0.000% { opacity: 0; }
+  25.000% { opacity: 1; }
+  50.000% { opacity: 1; }
+  75.000% { opacity: 0; }
+  100.000% { opacity: 0; }
+}
+.fx-kalp-2 { animation: kf-kalp-2 2s ease-in-out 0s infinite; }
+</style><g style="transform-origin: 12px 12px" class="fx-kalp-1"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" /><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" fill="currentColor" stroke="none" class="fx-kalp-2" /></g>
+</svg>

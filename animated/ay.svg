@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for former SMIL animations */
+@keyframes kf-ay-1 {
+  0.000% { opacity: 1; }
+  50.000% { opacity: 0.6; }
+  100.000% { opacity: 1; }
+}
+.fx-ay-1 { animation: kf-ay-1 3s ease-in-out 0s infinite; }
+
+@keyframes kf-ay-2 {
+  0.000% { opacity: 0.1; }
+  50.000% { opacity: 0.3; }
+  100.000% { opacity: 0.1; }
+}
+.fx-ay-2 { animation: kf-ay-2 3s ease-in-out 0s infinite; }
+
+@keyframes kf-ay-3 {
+  0.000% { opacity: 0.2; }
+  50.000% { opacity: 0.6; }
+  100.000% { opacity: 0.2; }
+}
+.fx-ay-3 { animation: kf-ay-3 2s ease-in-out 0s infinite; }
+
+@keyframes kf-ay-4 {
+  0.000% { opacity: 0.1; }
+  50.000% { opacity: 0.4; }
+  100.000% { opacity: 0.1; }
+}
+.fx-ay-4 { animation: kf-ay-4 2.5s ease-in-out 0.5s infinite; }
+</style><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" class="fx-ay-1" /><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor" stroke="none" class="fx-ay-2" /><circle cx="14" cy="8" r="1" fill="currentColor" stroke="none" opacity="0.4" class="fx-ay-3" /><circle cx="17" cy="11" r="0.7" fill="currentColor" stroke="none" opacity="0.3" class="fx-ay-4" />
+</svg>

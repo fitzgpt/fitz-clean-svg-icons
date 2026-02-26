@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for former SMIL animations */
+@keyframes kf-sil-1 {
+  0.000% { opacity: 1; }
+  50.000% { opacity: 0.5; }
+  100.000% { opacity: 1; }
+}
+.fx-sil-1 { animation: kf-sil-1 0.8s ease-in-out 0s infinite; }
+
+@keyframes kf-sil-2 {
+  0.000% { opacity: 0.5; }
+  50.000% { opacity: 1; }
+  100.000% { opacity: 0.5; }
+}
+.fx-sil-2 { animation: kf-sil-2 0.4s ease-in-out 0s infinite; }
+
+@keyframes kf-sil-3 {
+  0.000% { opacity: 0.5; }
+  50.000% { opacity: 1; }
+  100.000% { opacity: 0.5; }
+}
+.fx-sil-3 { animation: kf-sil-3 0.4s ease-in-out 0.2s infinite; }
+</style><polyline points="3 6 5 6 21 6" /><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" class="fx-sil-1" /><line x1="9" y1="10" x2="9" y2="18" opacity="0.5" class="fx-sil-2" /><line x1="15" y1="10" x2="15" y2="18" opacity="0.5" class="fx-sil-3" />
+</svg>

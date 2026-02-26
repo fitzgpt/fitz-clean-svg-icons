@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for stroke-dashoffset animation */
+.fx-gonder-legacy-1 { animation: fitzDashGonder1 1.5s ease-in-out infinite; animation-delay: 0s; }
+@keyframes fitzDashGonder1 {
+  0.000% { stroke-dashoffset: 16; }
+  50.000% { stroke-dashoffset: 0; }
+  100.000% { stroke-dashoffset: 16; }
+}
+.fx-gonder-legacy-2 { animation: fitzDashGonder2 1.5s ease-in-out infinite; animation-delay: 0s; }
+@keyframes fitzDashGonder2 {
+  0.000% { stroke-dashoffset: 60; }
+  50.000% { stroke-dashoffset: 0; }
+  100.000% { stroke-dashoffset: 60; }
+}
+</style><line x1="22" y1="2" x2="11" y2="13" stroke-dasharray="16" class="fx-gonder-legacy-1" stroke-dashoffset="16" /><polygon points="22 2 15 22 11 13 2 9 22 2" stroke-dasharray="60" class="fx-gonder-legacy-2" stroke-dashoffset="60" />
+</svg>

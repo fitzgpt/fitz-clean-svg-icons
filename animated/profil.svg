@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for stroke-dashoffset animation */
+.fx-profil-legacy-1 { animation: fitzDashProfil1 1.5s ease-in-out infinite; animation-delay: 0s; }
+@keyframes fitzDashProfil1 {
+  0.000% { stroke-dashoffset: 30; }
+  50.000% { stroke-dashoffset: 0; }
+  100.000% { stroke-dashoffset: 30; }
+}
+.fx-profil-legacy-2 { animation: fitzDashProfil2 1.5s ease-in-out infinite; animation-delay: 0.3s; }
+@keyframes fitzDashProfil2 {
+  0.000% { stroke-dashoffset: 25; }
+  50.000% { stroke-dashoffset: 0; }
+  100.000% { stroke-dashoffset: 25; }
+}
+</style><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke-dasharray="30" class="fx-profil-legacy-1" stroke-dashoffset="30" /><circle cx="12" cy="7" r="4" stroke-dasharray="25" class="fx-profil-legacy-2" stroke-dashoffset="25" />
+</svg>

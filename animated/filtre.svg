@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for former SMIL animations */
+@keyframes kf-filtre-1 {
+  0.000% { opacity: 0; }
+  25.000% { opacity: 1; }
+  50.000% { opacity: 1; }
+  75.000% { opacity: 0; }
+  100.000% { opacity: 0; }
+}
+.fx-filtre-1 { animation: kf-filtre-1 2s ease-in-out 0s infinite; }
+
+@keyframes kf-filtre-2 {
+  0.000% { transform: scale(1); }
+  33.333% { transform: scale(0.85); }
+  66.667% { transform: scale(1); }
+  100.000% { transform: scale(1); }
+}
+.fx-filtre-2 { animation: kf-filtre-2 2s ease-in-out 0s infinite; transform-box: fill-box; }
+</style><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" /><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" fill="currentColor" stroke="none" class="fx-filtre-1" /><g style="transform-origin: 12px 10px" class="fx-filtre-2" />
+</svg>

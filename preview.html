@@ -1,0 +1,1853 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fitz Miniclean SVG Set</title>
+  <style>
+    :root { 
+      --bg: #f8f9fa; --text: #1a1a1a; --card: #ffffff; 
+      --border: #e2e8f0; --icon-color: #1a1a1a; --muted: #94a3b8; 
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); padding: 2rem; }
+    .header { text-align: center; margin-bottom: 2rem; }
+    .header h1 { margin: 0 0 0.5rem; font-size: 2rem; font-weight: 800; }
+    .count { font-size: 0.8rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.15em; display: block; margin-bottom: 0.9rem; }
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.45rem 0.95rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: #ffffff;
+      color: var(--text);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-decoration: none;
+      margin-bottom: 2rem;
+      transition: all 0.2s;
+    }
+    .social-link:hover { border-color: #1a1a1a; background: #1a1a1a; color: #ffffff; }
+    
+    .color-bar { display: flex; justify-content: center; margin-bottom: 3rem; }
+    .colors { display: flex; gap: 10px; background: white; padding: 10px 20px; border-radius: 50px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+    .colors button { width: 28px; height: 28px; border: 3px solid transparent; border-radius: 50%; cursor: pointer; }
+    .colors button.active { border-color: #3b82f6; transform: scale(1.1); }
+    
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; }
+    @media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
+    
+    .item { background: var(--card); border: 1px solid var(--border); border-radius: 1.25rem; padding: 1.5rem; text-align: center; }
+    .row { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1rem; }
+    .icon-wrap { display: flex; flex-direction: column; align-items: center; background: #fafafa; padding: 1rem; border-radius: 1rem; border: 1px dashed #eee; }
+    
+    .icon-box { width: 56px; height: 56px; color: var(--icon-color); }
+    .icon-box svg { width: 100%; height: 100%; display: block; }
+.icon-wrap .label { font-size: 0.6rem; color: var(--muted); text-transform: uppercase; margin: 8px 0; font-weight: 700; }
+    .name { margin: 0; font-size: 1rem; font-weight: 700; color: var(--text); }
+    
+    .mini-actions { display: flex; gap: 4px; }
+    .mini-actions button { 
+      width: 24px; height: 24px; padding: 0; border: 1.5px solid #1a1a1a; 
+      border-radius: 4px; cursor: pointer; background: transparent; 
+      color: #1a1a1a; transition: all 0.2s; display: flex; align-items: center; justify-content: center;
+    }
+    .mini-actions button:hover { background: #1a1a1a; color: white; }
+    .mini-actions button:hover svg { stroke: white; }
+    
+    .toast { position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%); background: #1a1a1a; color: white; padding: 0.8rem 2rem; border-radius: 12px; font-size: 0.9rem; opacity: 0; transition: all 0.3s; pointer-events: none; z-index: 100; }
+    .toast.show { opacity: 1; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Fitz Miniclean SVG Set</h1>
+    <span class="count">42 İKON • 42 SABİT + 42 HAREKETLİ</span>
+    <a class="social-link" href="https://x.com/FitzGPT" target="_blank" rel="noopener noreferrer">x.com/FitzGPT • @FitzGPT</a>
+    <div class="color-bar">
+      <div class="colors">
+        <button style="background:#1a1a1a" data-color="#1a1a1a" onclick="setGlobalColor(this)" class="active"></button>
+        <button style="background:#3b82f6" data-color="#3b82f6" onclick="setGlobalColor(this)"></button>
+        <button style="background:#10b981" data-color="#10b981" onclick="setGlobalColor(this)"></button>
+        <button style="background:#f59e0b" data-color="#f59e0b" onclick="setGlobalColor(this)"></button>
+        <button style="background:#ef4444" data-color="#ef4444" onclick="setGlobalColor(this)"></button>
+        <button style="background:#8b5cf6" data-color="#8b5cf6" onclick="setGlobalColor(this)"></button>
+        <button style="background:#ec4899" data-color="#ec4899" onclick="setGlobalColor(this)"></button>
+        <button style="background:#06b6d4" data-color="#06b6d4" onclick="setGlobalColor(this)"></button>
+      </div>
+    </div>
+  </div>
+  <main class="grid">
+    
+        <article class="item" data-name="ana-sayfa">
+            <div class="row">
+                <div class="icon-wrap">
+                    <div class="icon-box static-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+</div>
+                    <span class="label">sabit</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'ana-sayfa', 'sabit')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'ana-sayfa', 'sabit')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+                <div class="icon-wrap">
+                    <div class="icon-box animated-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<style>@keyframes kfAnaKapi {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.fx-ana-kapi { animation: kfAnaKapi 1.5s ease-in-out infinite; }
+</style><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /><rect x="9" y="12" width="6" height="10" fill="currentColor" stroke="none" class="fx-ana-kapi" />
+</svg>
+                    </div>
+                    <span class="label">hareketli</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'ana-sayfa', 'hareketli')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'ana-sayfa', 'hareketli')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+            </div>
+            <p class="name">Ana Sayfa</p>
+        </article>
+        
+        <article class="item" data-name="geri">
+            <div class="row">
+                <div class="icon-wrap">
+                    <div class="icon-box static-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline>
+</svg>
+</div>
+                    <span class="label">sabit</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'geri', 'sabit')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'geri', 'sabit')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+                <div class="icon-wrap">
+                    <div class="icon-box animated-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for former SMIL animations */
+@keyframes kf-geri-1 {
+  0.000% { transform: translate(0px, 0px); }
+  50.000% { transform: translate(-3px, 0px); }
+  100.000% { transform: translate(0px, 0px); }
+}
+.fx-geri-1 { animation: kf-geri-1 1s ease-in-out 0s infinite; transform-box: fill-box; }
+</style><line x1="19" y1="12" x2="5" y2="12" /><polyline points="12 19 5 12 12 5" class="fx-geri-1" />
+</svg>
+                    </div>
+                    <span class="label">hareketli</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'geri', 'hareketli')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'geri', 'hareketli')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+            </div>
+            <p class="name">Geri</p>
+        </article>
+        
+        <article class="item" data-name="arama">
+            <div class="row">
+                <div class="icon-wrap">
+                    <div class="icon-box static-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+</svg>
+</div>
+                    <span class="label">sabit</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'arama', 'sabit')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'arama', 'sabit')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+                <div class="icon-wrap">
+                    <div class="icon-box animated-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for stroke-dashoffset animation */
+.fx-arama-legacy-1 { animation: fitzDashArama1 1.7s ease-in-out infinite; animation-delay: 0s; }
+@keyframes fitzDashArama1 {
+  0.000% { stroke-dashoffset: 50; }
+  50.000% { stroke-dashoffset: 0; }
+  100.000% { stroke-dashoffset: 50; }
+}
+.fx-arama-legacy-2 { animation: fitzDashArama2 1.7s ease-in-out infinite; animation-delay: 0.15s; }
+@keyframes fitzDashArama2 {
+  0.000% { stroke-dashoffset: 7; }
+  50.000% { stroke-dashoffset: 0; }
+  100.000% { stroke-dashoffset: 7; }
+}
+</style><circle cx="11" cy="11" r="8" stroke-dasharray="50" stroke-dashoffset="50" class="fx-arama-legacy-1" /><line x1="21" y1="21" x2="16.65" y2="16.65" stroke-dasharray="7" stroke-dashoffset="7" class="fx-arama-legacy-2" />
+</svg>
+                    </div>
+                    <span class="label">hareketli</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'arama', 'hareketli')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'arama', 'hareketli')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+            </div>
+            <p class="name">Arama</p>
+        </article>
+        
+        <article class="item" data-name="menu">
+            <div class="row">
+                <div class="icon-wrap">
+                    <div class="icon-box static-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+</svg>
+</div>
+                    <span class="label">sabit</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'menu', 'sabit')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'menu', 'sabit')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+                <div class="icon-wrap">
+                    <div class="icon-box animated-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>@keyframes kfMenuTop {
+  0%, 100% { transform: scaleX(1); }
+  50% { transform: scaleX(0.62); }
+}
+@keyframes kfMenuMid {
+  0%, 100% { transform: scaleX(1); }
+  50% { transform: scaleX(0.76); }
+}
+@keyframes kfMenuBottom {
+  0%, 100% { transform: scaleX(1); }
+  50% { transform: scaleX(0.45); }
+}
+.fx-menu-top { transform-origin: left center; transform-box: fill-box; animation: kfMenuTop 1.9s ease-in-out infinite; }
+.fx-menu-mid { transform-origin: right center; transform-box: fill-box; animation: kfMenuMid 1.9s ease-in-out .08s infinite; }
+.fx-menu-bottom { transform-origin: left center; transform-box: fill-box; animation: kfMenuBottom 1.9s ease-in-out .16s infinite; }
+</style><line x1="3" y1="6" x2="21" y2="6" class="fx-menu-top" /><line x1="3" y1="12" x2="21" y2="12" class="fx-menu-mid" /><line x1="3" y1="18" x2="21" y2="18" class="fx-menu-bottom" />
+</svg>
+                    </div>
+                    <span class="label">hareketli</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'menu', 'hareketli')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'menu', 'hareketli')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+            </div>
+            <p class="name">Menü</p>
+        </article>
+        
+        <article class="item" data-name="kapat">
+            <div class="row">
+                <div class="icon-wrap">
+                    <div class="icon-box static-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
+</svg>
+</div>
+                    <span class="label">sabit</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'kapat', 'sabit')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'kapat', 'sabit')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+                <div class="icon-wrap">
+                    <div class="icon-box animated-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for stroke-dashoffset animation */
+.fx-kapat-legacy-1 { animation: fitzDashKapat1 1.5s ease-in-out infinite; animation-delay: 0s; }
+@keyframes fitzDashKapat1 {
+  0.000% { stroke-dashoffset: 17; }
+  50.000% { stroke-dashoffset: 0; }
+  100.000% { stroke-dashoffset: 17; }
+}
+.fx-kapat-legacy-2 { animation: fitzDashKapat2 1.5s ease-in-out infinite; animation-delay: 0.3s; }
+@keyframes fitzDashKapat2 {
+  0.000% { stroke-dashoffset: 17; }
+  50.000% { stroke-dashoffset: 0; }
+  100.000% { stroke-dashoffset: 17; }
+}
+</style><line x1="18" y1="6" x2="6" y2="18" stroke-dasharray="17" class="fx-kapat-legacy-1" stroke-dashoffset="17" /><line x1="6" y1="6" x2="18" y2="18" stroke-dasharray="17" class="fx-kapat-legacy-2" stroke-dashoffset="17" />
+</svg>
+                    </div>
+                    <span class="label">hareketli</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'kapat', 'hareketli')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'kapat', 'hareketli')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+            </div>
+            <p class="name">Kapat</p>
+        </article>
+        
+        <article class="item" data-name="profil">
+            <div class="row">
+                <div class="icon-wrap">
+                    <div class="icon-box static-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle>
+</svg>
+</div>
+                    <span class="label">sabit</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'profil', 'sabit')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'profil', 'sabit')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+                <div class="icon-wrap">
+                    <div class="icon-box animated-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for stroke-dashoffset animation */
+.fx-profil-legacy-1 { animation: fitzDashProfil1 1.5s ease-in-out infinite; animation-delay: 0s; }
+@keyframes fitzDashProfil1 {
+  0.000% { stroke-dashoffset: 30; }
+  50.000% { stroke-dashoffset: 0; }
+  100.000% { stroke-dashoffset: 30; }
+}
+.fx-profil-legacy-2 { animation: fitzDashProfil2 1.5s ease-in-out infinite; animation-delay: 0.3s; }
+@keyframes fitzDashProfil2 {
+  0.000% { stroke-dashoffset: 25; }
+  50.000% { stroke-dashoffset: 0; }
+  100.000% { stroke-dashoffset: 25; }
+}
+</style><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke-dasharray="30" class="fx-profil-legacy-1" stroke-dashoffset="30" /><circle cx="12" cy="7" r="4" stroke-dasharray="25" class="fx-profil-legacy-2" stroke-dashoffset="25" />
+</svg>
+                    </div>
+                    <span class="label">hareketli</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'profil', 'hareketli')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'profil', 'hareketli')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+            </div>
+            <p class="name">Profil</p>
+        </article>
+        
+        <article class="item" data-name="ayarlar">
+            <div class="row">
+                <div class="icon-wrap">
+                    <div class="icon-box static-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+</svg>
+</div>
+                    <span class="label">sabit</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'ayarlar', 'sabit')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'ayarlar', 'sabit')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+                <div class="icon-wrap">
+                    <div class="icon-box animated-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>@keyframes kfAyarlarDon {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.fx-ayarlar-don { transform-origin: 50% 50%; transform-box: view-box; animation: kfAyarlarDon 3.6s linear infinite; }
+</style><g class="fx-ayarlar-don"><circle cx="12" cy="12" r="3" /><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" /></g>
+</svg>
+                    </div>
+                    <span class="label">hareketli</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'ayarlar', 'hareketli')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'ayarlar', 'hareketli')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+            </div>
+            <p class="name">Ayarlar</p>
+        </article>
+        
+        <article class="item" data-name="bildirim">
+            <div class="row">
+                <div class="icon-wrap">
+                    <div class="icon-box static-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+</svg>
+</div>
+                    <span class="label">sabit</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'bildirim', 'sabit')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'bildirim', 'sabit')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+                <div class="icon-wrap">
+                    <div class="icon-box animated-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for former SMIL animations */
+@keyframes kf-bildirim-1 {
+  0.000% { transform: rotate(0deg); }
+  33.333% { transform: rotate(15deg); }
+  66.667% { transform: rotate(-15deg); }
+  100.000% { transform: rotate(0deg); }
+}
+.fx-bildirim-1 { animation: kf-bildirim-1 0.5s ease-in-out 0s infinite; transform-box: fill-box; }
+</style><g style="transform-origin: 12px 8px" class="fx-bildirim-1"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" /></g><path d="M13.73 21a2 2 0 0 1-3.46 0" />
+</svg>
+                    </div>
+                    <span class="label">hareketli</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'bildirim', 'hareketli')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'bildirim', 'hareketli')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+            </div>
+            <p class="name">Bildirim</p>
+        </article>
+        
+        <article class="item" data-name="giris">
+            <div class="row">
+                <div class="icon-wrap">
+                    <div class="icon-box static-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line>
+</svg>
+</div>
+                    <span class="label">sabit</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'giris', 'sabit')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'giris', 'sabit')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+                <div class="icon-wrap">
+                    <div class="icon-box animated-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for former SMIL animations */
+@keyframes kf-giris-1 {
+  0.000% { transform: translate(0px, 0px); }
+  50.000% { transform: translate(3px, 0px); }
+  100.000% { transform: translate(0px, 0px); }
+}
+.fx-giris-1 { animation: kf-giris-1 1s ease-in-out 0s infinite; transform-box: fill-box; }
+</style><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" /><polyline points="16 17 21 12 16 7" class="fx-giris-1" /><line x1="21" y1="12" x2="9" y2="12" />
+</svg>
+                    </div>
+                    <span class="label">hareketli</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'giris', 'hareketli')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'giris', 'hareketli')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+            </div>
+            <p class="name">Giriş</p>
+        </article>
+        
+        <article class="item" data-name="ekle">
+            <div class="row">
+                <div class="icon-wrap">
+                    <div class="icon-box static-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line>
+</svg>
+</div>
+                    <span class="label">sabit</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'ekle', 'sabit')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'ekle', 'sabit')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+                <div class="icon-wrap">
+                    <div class="icon-box animated-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for stroke-dashoffset animation */
+.fx-ekle-legacy-1 { animation: fitzDashEkle1 2s ease-in-out infinite; animation-delay: 0s; }
+@keyframes fitzDashEkle1 {
+  0.000% { stroke-dashoffset: 14; }
+  25.000% { stroke-dashoffset: 0; }
+  50.000% { stroke-dashoffset: 0; }
+  75.000% { stroke-dashoffset: 14; }
+  100.000% { stroke-dashoffset: 14; }
+}
+.fx-ekle-legacy-2 { animation: fitzDashEkle2 2s ease-in-out infinite; animation-delay: 0.2s; }
+@keyframes fitzDashEkle2 {
+  0.000% { stroke-dashoffset: 14; }
+  25.000% { stroke-dashoffset: 0; }
+  50.000% { stroke-dashoffset: 0; }
+  75.000% { stroke-dashoffset: 14; }
+  100.000% { stroke-dashoffset: 14; }
+}
+</style><line x1="12" y1="5" x2="12" y2="19" stroke-dasharray="14" class="fx-ekle-legacy-1" stroke-dashoffset="14" /><line x1="5" y1="12" x2="19" y2="12" stroke-dasharray="14" class="fx-ekle-legacy-2" stroke-dashoffset="14" />
+</svg>
+                    </div>
+                    <span class="label">hareketli</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'ekle', 'hareketli')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'ekle', 'hareketli')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+            </div>
+            <p class="name">Ekle</p>
+        </article>
+        
+        <article class="item" data-name="duzenle">
+            <div class="row">
+                <div class="icon-wrap">
+                    <div class="icon-box static-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+</svg>
+</div>
+                    <span class="label">sabit</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'duzenle', 'sabit')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'duzenle', 'sabit')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+                <div class="icon-wrap">
+                    <div class="icon-box animated-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for stroke-dashoffset animation */
+.fx-duzenle-legacy-1 { animation: fitzDashDuzenle1 3s ease-in-out infinite; animation-delay: 0s; }
+@keyframes fitzDashDuzenle1 {
+  0.000% { stroke-dashoffset: 35; }
+  50.000% { stroke-dashoffset: 0; }
+  100.000% { stroke-dashoffset: 35; }
+}
+</style><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" /><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" stroke-dasharray="35" class="fx-duzenle-legacy-1" stroke-dashoffset="35" />
+</svg>
+                    </div>
+                    <span class="label">hareketli</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'duzenle', 'hareketli')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'duzenle', 'hareketli')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+            </div>
+            <p class="name">Düzenle</p>
+        </article>
+        
+        <article class="item" data-name="sil">
+            <div class="row">
+                <div class="icon-wrap">
+                    <div class="icon-box static-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+</svg>
+</div>
+                    <span class="label">sabit</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'sil', 'sabit')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'sil', 'sabit')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+                <div class="icon-wrap">
+                    <div class="icon-box animated-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for former SMIL animations */
+@keyframes kf-sil-1 {
+  0.000% { opacity: 1; }
+  50.000% { opacity: 0.5; }
+  100.000% { opacity: 1; }
+}
+.fx-sil-1 { animation: kf-sil-1 0.8s ease-in-out 0s infinite; }
+
+@keyframes kf-sil-2 {
+  0.000% { opacity: 0.5; }
+  50.000% { opacity: 1; }
+  100.000% { opacity: 0.5; }
+}
+.fx-sil-2 { animation: kf-sil-2 0.4s ease-in-out 0s infinite; }
+
+@keyframes kf-sil-3 {
+  0.000% { opacity: 0.5; }
+  50.000% { opacity: 1; }
+  100.000% { opacity: 0.5; }
+}
+.fx-sil-3 { animation: kf-sil-3 0.4s ease-in-out 0.2s infinite; }
+</style><polyline points="3 6 5 6 21 6" /><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" class="fx-sil-1" /><line x1="9" y1="10" x2="9" y2="18" opacity="0.5" class="fx-sil-2" /><line x1="15" y1="10" x2="15" y2="18" opacity="0.5" class="fx-sil-3" />
+</svg>
+                    </div>
+                    <span class="label">hareketli</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'sil', 'hareketli')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'sil', 'hareketli')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+            </div>
+            <p class="name">Sil</p>
+        </article>
+        
+        <article class="item" data-name="kaydet">
+            <div class="row">
+                <div class="icon-wrap">
+                    <div class="icon-box static-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+</svg>
+</div>
+                    <span class="label">sabit</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'kaydet', 'sabit')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'kaydet', 'sabit')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+                <div class="icon-wrap">
+                    <div class="icon-box animated-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for former SMIL animations */
+@keyframes kf-kaydet-1 {
+  0.000% { opacity: 0; }
+  25.000% { opacity: 0; }
+  50.000% { opacity: 1; }
+  75.000% { opacity: 1; }
+  100.000% { opacity: 0; }
+}
+.fx-kaydet-1 { animation: kf-kaydet-1 2s ease-in-out 0s infinite; }
+
+@keyframes kf-kaydet-2 {
+  0.000% { transform: scale(1); }
+  25.000% { transform: scale(0.9); }
+  50.000% { transform: scale(1.05); }
+  75.000% { transform: scale(1); }
+  100.000% { transform: scale(1); }
+}
+.fx-kaydet-2 { animation: kf-kaydet-2 2s ease-in-out 0s infinite; transform-box: fill-box; }
+</style><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" /><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" fill="currentColor" stroke="none" class="fx-kaydet-1" /><g style="transform-origin: 12px 12px" class="fx-kaydet-2" />
+</svg>
+                    </div>
+                    <span class="label">hareketli</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'kaydet', 'hareketli')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'kaydet', 'hareketli')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+            </div>
+            <p class="name">Kaydet</p>
+        </article>
+        
+        <article class="item" data-name="paylas">
+            <div class="row">
+                <div class="icon-wrap">
+                    <div class="icon-box static-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+</svg>
+</div>
+                    <span class="label">sabit</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'paylas', 'sabit')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'paylas', 'sabit')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+                <div class="icon-wrap">
+                    <div class="icon-box animated-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for stroke-dashoffset animation */
+.fx-paylas-legacy-1 { animation: fitzDashPaylas1 2s ease-in-out infinite; animation-delay: 0s; }
+@keyframes fitzDashPaylas1 {
+  0.000% { stroke-dashoffset: 10; }
+  50.000% { stroke-dashoffset: 0; }
+  100.000% { stroke-dashoffset: 10; }
+}
+.fx-paylas-legacy-2 { animation: fitzDashPaylas2 2s ease-in-out infinite; animation-delay: 0s; }
+@keyframes fitzDashPaylas2 {
+  0.000% { stroke-dashoffset: 10; }
+  50.000% { stroke-dashoffset: 0; }
+  100.000% { stroke-dashoffset: 10; }
+}
+</style><circle cx="18" cy="5" r="3" /><circle cx="6" cy="12" r="3" /><circle cx="18" cy="19" r="3" /><line x1="8.59" y1="13.51" x2="15.42" y2="17.49" stroke-dasharray="10" class="fx-paylas-legacy-1" stroke-dashoffset="10" /><line x1="15.41" y1="6.51" x2="8.59" y2="10.49" stroke-dasharray="10" class="fx-paylas-legacy-2" stroke-dashoffset="10" />
+</svg>
+                    </div>
+                    <span class="label">hareketli</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'paylas', 'hareketli')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'paylas', 'hareketli')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+            </div>
+            <p class="name">Paylaş</p>
+        </article>
+        
+        <article class="item" data-name="onay">
+            <div class="row">
+                <div class="icon-wrap">
+                    <div class="icon-box static-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="10"></circle><polyline points="8 12 11 15 16 9"></polyline>
+</svg>
+</div>
+                    <span class="label">sabit</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'onay', 'sabit')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'onay', 'sabit')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+                <div class="icon-wrap">
+                    <div class="icon-box animated-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for stroke-dashoffset animation */
+.fx-onay-legacy-1 { animation: fitzDashOnay1 1.5s ease-in-out infinite; animation-delay: 0s; }
+@keyframes fitzDashOnay1 {
+  0.000% { stroke-dashoffset: 25; }
+  50.000% { stroke-dashoffset: 0; }
+  100.000% { stroke-dashoffset: 25; }
+}
+</style><circle cx="12" cy="12" r="10" /><polyline points="8 12 11 15 16 9" stroke-dasharray="25" class="fx-onay-legacy-1" stroke-dashoffset="25" />
+</svg>
+                    </div>
+                    <span class="label">hareketli</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'onay', 'hareketli')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'onay', 'hareketli')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+            </div>
+            <p class="name">Onay</p>
+        </article>
+        
+        <article class="item" data-name="mesaj">
+            <div class="row">
+                <div class="icon-wrap">
+                    <div class="icon-box static-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+</svg>
+</div>
+                    <span class="label">sabit</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'mesaj', 'sabit')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'mesaj', 'sabit')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+                <div class="icon-wrap">
+                    <div class="icon-box animated-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for stroke-dashoffset animation */
+.fx-mesaj-legacy-1 { animation: fitzDashMesaj1 2.5s ease-in-out infinite; animation-delay: 0s; }
+@keyframes fitzDashMesaj1 {
+  0.000% { stroke-dashoffset: 60; }
+  33.333% { stroke-dashoffset: 0; }
+  66.667% { stroke-dashoffset: 0; }
+  100.000% { stroke-dashoffset: 60; }
+}
+
+/* CSS fallback for former SMIL animations */
+@keyframes kf-mesaj-1 {
+  0.000% { r: 1; }
+  50.000% { r: 1.5; }
+  100.000% { r: 1; }
+}
+.fx-mesaj-1 { animation: kf-mesaj-1 1s ease-in-out 0s infinite; }
+
+@keyframes kf-mesaj-2 {
+  0.000% { r: 1; }
+  50.000% { r: 1.5; }
+  100.000% { r: 1; }
+}
+.fx-mesaj-2 { animation: kf-mesaj-2 1s ease-in-out 0.2s infinite; }
+
+@keyframes kf-mesaj-3 {
+  0.000% { r: 1; }
+  50.000% { r: 1.5; }
+  100.000% { r: 1; }
+}
+.fx-mesaj-3 { animation: kf-mesaj-3 1s ease-in-out 0.4s infinite; }
+</style><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke-dasharray="60" class="fx-mesaj-legacy-1" stroke-dashoffset="60" /><circle cx="8" cy="11" r="1" fill="currentColor" stroke="none" class="fx-mesaj-1" /><circle cx="12" cy="11" r="1" fill="currentColor" stroke="none" class="fx-mesaj-2" /><circle cx="16" cy="11" r="1" fill="currentColor" stroke="none" class="fx-mesaj-3" />
+</svg>
+                    </div>
+                    <span class="label">hareketli</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'mesaj', 'hareketli')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'mesaj', 'hareketli')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+            </div>
+            <p class="name">Mesaj</p>
+        </article>
+        
+        <article class="item" data-name="eposta">
+            <div class="row">
+                <div class="icon-wrap">
+                    <div class="icon-box static-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+</div>
+                    <span class="label">sabit</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'eposta', 'sabit')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'eposta', 'sabit')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+                <div class="icon-wrap">
+                    <div class="icon-box animated-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for stroke-dashoffset animation */
+.fx-eposta-legacy-1 { animation: fitzDashEposta1 1.5s ease-in-out infinite; animation-delay: 0s; }
+@keyframes fitzDashEposta1 {
+  0.000% { stroke-dashoffset: 60; }
+  50.000% { stroke-dashoffset: 0; }
+  100.000% { stroke-dashoffset: 60; }
+}
+.fx-eposta-legacy-2 { animation: fitzDashEposta2 1.5s ease-in-out infinite; animation-delay: 0.3s; }
+@keyframes fitzDashEposta2 {
+  0.000% { stroke-dashoffset: 20; }
+  50.000% { stroke-dashoffset: 0; }
+  100.000% { stroke-dashoffset: 20; }
+}
+</style><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke-dasharray="60" class="fx-eposta-legacy-1" stroke-dashoffset="60" /><polyline points="22,6 12,13 2,6" stroke-dasharray="20" class="fx-eposta-legacy-2" stroke-dashoffset="20" />
+</svg>
+                    </div>
+                    <span class="label">hareketli</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'eposta', 'hareketli')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'eposta', 'hareketli')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+            </div>
+            <p class="name">E-posta</p>
+        </article>
+        
+        <article class="item" data-name="kalp">
+            <div class="row">
+                <div class="icon-wrap">
+                    <div class="icon-box static-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+</svg>
+</div>
+                    <span class="label">sabit</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'kalp', 'sabit')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'kalp', 'sabit')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+                <div class="icon-wrap">
+                    <div class="icon-box animated-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for former SMIL animations */
+@keyframes kf-kalp-1 {
+  0.000% { transform: scale(1); }
+  25.000% { transform: scale(0.8); }
+  50.000% { transform: scale(1.1); }
+  75.000% { transform: scale(1); }
+  100.000% { transform: scale(1); }
+}
+.fx-kalp-1 { animation: kf-kalp-1 2s ease-in-out 0s infinite; transform-box: fill-box; }
+
+@keyframes kf-kalp-2 {
+  0.000% { opacity: 0; }
+  25.000% { opacity: 1; }
+  50.000% { opacity: 1; }
+  75.000% { opacity: 0; }
+  100.000% { opacity: 0; }
+}
+.fx-kalp-2 { animation: kf-kalp-2 2s ease-in-out 0s infinite; }
+</style><g style="transform-origin: 12px 12px" class="fx-kalp-1"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" /><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" fill="currentColor" stroke="none" class="fx-kalp-2" /></g>
+</svg>
+                    </div>
+                    <span class="label">hareketli</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'kalp', 'hareketli')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'kalp', 'hareketli')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+            </div>
+            <p class="name">Kalp</p>
+        </article>
+        
+        <article class="item" data-name="bilgi">
+            <div class="row">
+                <div class="icon-wrap">
+                    <div class="icon-box static-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line>
+</svg>
+</div>
+                    <span class="label">sabit</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'bilgi', 'sabit')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'bilgi', 'sabit')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+                <div class="icon-wrap">
+                    <div class="icon-box animated-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for former SMIL animations */
+@keyframes kf-bilgi-1 {
+  0.000% { y2: 12; }
+  50.000% { y2: 8; }
+  100.000% { y2: 12; }
+}
+.fx-bilgi-1 { animation: kf-bilgi-1 1.5s ease-in-out 0s infinite; }
+
+@keyframes kf-bilgi-2 {
+  0.000% { opacity: 1; }
+  50.000% { opacity: 0.3; }
+  100.000% { opacity: 1; }
+}
+.fx-bilgi-2 { animation: kf-bilgi-2 1s ease-in-out 0s infinite; }
+</style><circle cx="12" cy="12" r="10" /><line x1="12" y1="16" x2="12" y2="12" class="fx-bilgi-1" /><circle cx="12" cy="8" r="1" fill="currentColor" stroke="none" class="fx-bilgi-2" />
+</svg>
+                    </div>
+                    <span class="label">hareketli</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'bilgi', 'hareketli')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'bilgi', 'hareketli')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+            </div>
+            <p class="name">Bilgi</p>
+        </article>
+        
+        <article class="item" data-name="kamera">
+            <div class="row">
+                <div class="icon-wrap">
+                    <div class="icon-box static-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle>
+</svg>
+</div>
+                    <span class="label">sabit</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'kamera', 'sabit')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'kamera', 'sabit')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+                <div class="icon-wrap">
+                    <div class="icon-box animated-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for former SMIL animations */
+@keyframes kf-kamera-1 {
+  0.000% { r: 4; }
+  50.000% { r: 2; }
+  100.000% { r: 4; }
+}
+.fx-kamera-1 { animation: kf-kamera-1 1.5s ease-in-out 0s infinite; }
+</style><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" /><circle cx="12" cy="13" r="4" class="fx-kamera-1" />
+</svg>
+                    </div>
+                    <span class="label">hareketli</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'kamera', 'hareketli')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'kamera', 'hareketli')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+            </div>
+            <p class="name">Kamera</p>
+        </article>
+        
+        <article class="item" data-name="galeri">
+            <div class="row">
+                <div class="icon-wrap">
+                    <div class="icon-box static-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline>
+</svg>
+</div>
+                    <span class="label">sabit</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'galeri', 'sabit')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'galeri', 'sabit')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+                <div class="icon-wrap">
+                    <div class="icon-box animated-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for stroke-dashoffset animation */
+.fx-galeri-legacy-1 { animation: fitzDashGaleri1 2s ease-in-out infinite; animation-delay: 0s; }
+@keyframes fitzDashGaleri1 {
+  0.000% { stroke-dashoffset: 25; }
+  50.000% { stroke-dashoffset: 0; }
+  100.000% { stroke-dashoffset: 25; }
+}
+
+/* CSS fallback for former SMIL animations */
+@keyframes kf-galeri-1 {
+  0.000% { r: 1.5; }
+  50.000% { r: 2; }
+  100.000% { r: 1.5; }
+}
+.fx-galeri-1 { animation: kf-galeri-1 2s ease-in-out 0s infinite; }
+</style><rect x="3" y="3" width="18" height="18" rx="2" ry="2" /><circle cx="8.5" cy="8.5" r="1.5" class="fx-galeri-1" /><polyline points="21 15 16 10 5 21" stroke-dasharray="25" class="fx-galeri-legacy-1" stroke-dashoffset="25" />
+</svg>
+                    </div>
+                    <span class="label">hareketli</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'galeri', 'hareketli')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'galeri', 'hareketli')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+            </div>
+            <p class="name">Galeri</p>
+        </article>
+        
+        <article class="item" data-name="dosya">
+            <div class="row">
+                <div class="icon-wrap">
+                    <div class="icon-box static-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+</svg>
+</div>
+                    <span class="label">sabit</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'dosya', 'sabit')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'dosya', 'sabit')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+                <div class="icon-wrap">
+                    <div class="icon-box animated-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for stroke-dashoffset animation */
+.fx-dosya-legacy-1 { animation: fitzDashDosya1 2s ease-in-out infinite; animation-delay: 0s; }
+@keyframes fitzDashDosya1 {
+  0.000% { stroke-dashoffset: 20; }
+  50.000% { stroke-dashoffset: 0; }
+  100.000% { stroke-dashoffset: 20; }
+}
+</style><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" /><polyline points="13 2 13 9 20 9" stroke-dasharray="20" class="fx-dosya-legacy-1" stroke-dashoffset="20" />
+</svg>
+                    </div>
+                    <span class="label">hareketli</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'dosya', 'hareketli')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'dosya', 'hareketli')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+            </div>
+            <p class="name">Dosya</p>
+        </article>
+        
+        <article class="item" data-name="indir">
+            <div class="row">
+                <div class="icon-wrap">
+                    <div class="icon-box static-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line>
+</svg>
+</div>
+                    <span class="label">sabit</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'indir', 'sabit')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'indir', 'sabit')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+                <div class="icon-wrap">
+                    <div class="icon-box animated-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for former SMIL animations */
+@keyframes kf-indir-1 {
+  0.000% { transform: translate(0px, 0px); }
+  33.333% { transform: translate(0px, 0px); }
+  66.667% { transform: translate(0px, 1.3333px); }
+  100.000% { transform: translate(0px, 0px); }
+}
+.fx-indir-1 { animation: kf-indir-1 1.5s ease-in-out 0s infinite; transform-box: fill-box; }
+
+@keyframes kf-indir-2 {
+  0.000% { y1: 15; }
+  50.000% { y1: 8; }
+  100.000% { y1: 15; }
+}
+.fx-indir-2 { animation: kf-indir-2 1s ease-in-out 0s infinite; }
+</style><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" class="fx-indir-1" /><line x1="12" y1="15" x2="12" y2="3" class="fx-indir-2" />
+</svg>
+                    </div>
+                    <span class="label">hareketli</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'indir', 'hareketli')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'indir', 'hareketli')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+            </div>
+            <p class="name">İndir</p>
+        </article>
+        
+        <article class="item" data-name="yukle">
+            <div class="row">
+                <div class="icon-wrap">
+                    <div class="icon-box static-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line>
+</svg>
+</div>
+                    <span class="label">sabit</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'yukle', 'sabit')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'yukle', 'sabit')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+                <div class="icon-wrap">
+                    <div class="icon-box animated-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for former SMIL animations */
+@keyframes kf-yukle-1 {
+  0.000% { transform: translate(0px, 0px); }
+  50.000% { transform: translate(0px, -2px); }
+  100.000% { transform: translate(0px, 0px); }
+}
+.fx-yukle-1 { animation: kf-yukle-1 1s ease-in-out 0s infinite; transform-box: fill-box; }
+
+@keyframes kf-yukle-2 {
+  0.000% { y2: 15; }
+  50.000% { y2: 8; }
+  100.000% { y2: 15; }
+}
+.fx-yukle-2 { animation: kf-yukle-2 1s ease-in-out 0s infinite; }
+</style><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="17 8 12 3 7 8" class="fx-yukle-1" /><line x1="12" y1="3" x2="12" y2="15" class="fx-yukle-2" />
+</svg>
+                    </div>
+                    <span class="label">hareketli</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'yukle', 'hareketli')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'yukle', 'hareketli')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+            </div>
+            <p class="name">Yükle</p>
+        </article>
+        
+        <article class="item" data-name="yukleniyor">
+            <div class="row">
+                <div class="icon-wrap">
+                    <div class="icon-box static-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 2v4"></path><path d="M12 18v4"></path><path d="M4.93 4.93l2.83 2.83"></path><path d="M16.24 16.24l2.83 2.83"></path><path d="M2 12h4"></path><path d="M18 12h4"></path><path d="M4.93 19.07l2.83-2.83"></path><path d="M16.24 7.76l2.83-2.83"></path>
+</svg>
+</div>
+                    <span class="label">sabit</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'yukleniyor', 'sabit')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'yukleniyor', 'sabit')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+                <div class="icon-wrap">
+                    <div class="icon-box animated-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>@keyframes kfYukleniyorDon {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.fx-yukleniyor-don { transform-origin: 50% 50%; transform-box: view-box; animation: kfYukleniyorDon 1.2s linear infinite; }
+</style><g class="fx-yukleniyor-don"><path d="M12 2v4" /><path d="M12 18v4" /><path d="M4.93 4.93l2.83 2.83" /><path d="M16.24 16.24l2.83 2.83" /><path d="M2 12h4" /><path d="M18 12h4" /><path d="M4.93 19.07l2.83-2.83" /><path d="M16.24 7.76l2.83-2.83" /></g>
+</svg>
+                    </div>
+                    <span class="label">hareketli</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'yukleniyor', 'hareketli')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'yukleniyor', 'hareketli')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+            </div>
+            <p class="name">Yükleniyor</p>
+        </article>
+        
+        <article class="item" data-name="hata">
+            <div class="row">
+                <div class="icon-wrap">
+                    <div class="icon-box static-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line>
+</svg>
+</div>
+                    <span class="label">sabit</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'hata', 'sabit')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'hata', 'sabit')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+                <div class="icon-wrap">
+                    <div class="icon-box animated-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>@keyframes kfHataX {
+  0%, 55%, 100% { opacity: 1; }
+  65%, 85% { opacity: 0; }
+}
+.fx-hata-x { animation: kfHataX 1.25s steps(1, end) infinite; }
+</style><circle cx="12" cy="12" r="10" /><g class="fx-hata-x"><line x1="15" y1="9" x2="9" y2="15" /><line x1="9" y1="9" x2="15" y2="15" /></g>
+</svg>
+                    </div>
+                    <span class="label">hareketli</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'hata', 'hareketli')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'hata', 'hareketli')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+            </div>
+            <p class="name">Hata</p>
+        </article>
+        
+        <article class="item" data-name="filtre">
+            <div class="row">
+                <div class="icon-wrap">
+                    <div class="icon-box static-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+</svg>
+</div>
+                    <span class="label">sabit</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'filtre', 'sabit')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'filtre', 'sabit')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+                <div class="icon-wrap">
+                    <div class="icon-box animated-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for former SMIL animations */
+@keyframes kf-filtre-1 {
+  0.000% { opacity: 0; }
+  25.000% { opacity: 1; }
+  50.000% { opacity: 1; }
+  75.000% { opacity: 0; }
+  100.000% { opacity: 0; }
+}
+.fx-filtre-1 { animation: kf-filtre-1 2s ease-in-out 0s infinite; }
+
+@keyframes kf-filtre-2 {
+  0.000% { transform: scale(1); }
+  33.333% { transform: scale(0.85); }
+  66.667% { transform: scale(1); }
+  100.000% { transform: scale(1); }
+}
+.fx-filtre-2 { animation: kf-filtre-2 2s ease-in-out 0s infinite; transform-box: fill-box; }
+</style><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" /><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" fill="currentColor" stroke="none" class="fx-filtre-1" /><g style="transform-origin: 12px 10px" class="fx-filtre-2" />
+</svg>
+                    </div>
+                    <span class="label">hareketli</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'filtre', 'hareketli')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'filtre', 'hareketli')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+            </div>
+            <p class="name">Filtre</p>
+        </article>
+        
+        <article class="item" data-name="sepet">
+            <div class="row">
+                <div class="icon-wrap">
+                    <div class="icon-box static-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+</svg>
+</div>
+                    <span class="label">sabit</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'sepet', 'sabit')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'sepet', 'sabit')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+                <div class="icon-wrap">
+                    <div class="icon-box animated-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for former SMIL animations */
+@keyframes kf-sepet-1 {
+  0.000% { y: -2; }
+  50.000% { y: 10; }
+  100.000% { y: 10; }
+}
+@keyframes kf-sepet-2 {
+  0.000% { opacity: 0; }
+  10.000% { opacity: 1; }
+  40.000% { opacity: 1; }
+  50.000% { opacity: 0; }
+  100.000% { opacity: 0; }
+}
+.fx-sepet-1 { animation: kf-sepet-1 1.5s ease-in-out 0s infinite, kf-sepet-2 1.5s ease-in-out 0s infinite; }
+</style><circle cx="9" cy="21" r="1" /><circle cx="20" cy="21" r="1" /><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" /><rect x="12" y="-2" width="4" height="4" rx="1" class="fx-sepet-1" />
+</svg>
+                    </div>
+                    <span class="label">hareketli</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'sepet', 'hareketli')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'sepet', 'hareketli')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+            </div>
+            <p class="name">Sepet</p>
+        </article>
+        
+        <article class="item" data-name="kart">
+            <div class="row">
+                <div class="icon-wrap">
+                    <div class="icon-box static-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line><line x1="4" y1="14" x2="12" y2="14" stroke-width="2"></line><line x1="4" y1="17" x2="8" y2="17" stroke-width="2"></line>
+</svg>
+</div>
+                    <span class="label">sabit</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'kart', 'sabit')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'kart', 'sabit')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+                <div class="icon-wrap">
+                    <div class="icon-box animated-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>@keyframes kfKartSatir1 {
+  0%, 45%, 100% { opacity: 1; }
+  55%, 80% { opacity: 0; }
+}
+@keyframes kfKartSatir2 {
+  0%, 35%, 100% { opacity: 1; }
+  45%, 70% { opacity: 0; }
+}
+.fx-kart-s1 { animation: kfKartSatir1 1.8s steps(1, end) infinite; }
+.fx-kart-s2 { animation: kfKartSatir2 1.8s steps(1, end) infinite; }
+</style><rect x="1" y="4" width="22" height="16" rx="2" ry="2" /><line x1="1" y1="10" x2="23" y2="10" /><line x1="4" y1="14" x2="12" y2="14" class="fx-kart-s1" /><line x1="4" y1="17" x2="8" y2="17" class="fx-kart-s2" />
+</svg>
+                    </div>
+                    <span class="label">hareketli</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'kart', 'hareketli')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'kart', 'hareketli')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+            </div>
+            <p class="name">Kart</p>
+        </article>
+        
+        <article class="item" data-name="wifi">
+            <div class="row">
+                <div class="icon-wrap">
+                    <div class="icon-box static-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M5 12.55a11 11 0 0 1 14.08 0"></path><path d="M1.42 9a16 16 0 0 1 21.16 0"></path><path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path><circle cx="12" cy="20" r="1"></circle>
+</svg>
+</div>
+                    <span class="label">sabit</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'wifi', 'sabit')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'wifi', 'sabit')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+                <div class="icon-wrap">
+                    <div class="icon-box animated-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for former SMIL animations */
+@keyframes kf-wifi-1 {
+  0.000% { opacity: 0.3; }
+  50.000% { opacity: 1; }
+  100.000% { opacity: 0.3; }
+}
+.fx-wifi-1 { animation: kf-wifi-1 1.5s ease-in-out 0s infinite; }
+
+@keyframes kf-wifi-2 {
+  0.000% { opacity: 0.3; }
+  50.000% { opacity: 1; }
+  100.000% { opacity: 0.3; }
+}
+.fx-wifi-2 { animation: kf-wifi-2 1.5s ease-in-out 0.2s infinite; }
+
+@keyframes kf-wifi-3 {
+  0.000% { opacity: 0.3; }
+  50.000% { opacity: 1; }
+  100.000% { opacity: 0.3; }
+}
+.fx-wifi-3 { animation: kf-wifi-3 1.5s ease-in-out 0.4s infinite; }
+
+@keyframes kf-wifi-4 {
+  0.000% { r: 1; }
+  50.000% { r: 1.5; }
+  100.000% { r: 1; }
+}
+.fx-wifi-4 { animation: kf-wifi-4 1s ease-in-out 0s infinite; }
+</style><path d="M5 12.55a11 11 0 0 1 14.08 0" stroke-dasharray="20" class="fx-wifi-1" /><path d="M1.42 9a16 16 0 0 1 21.16 0" stroke-dasharray="25" class="fx-wifi-2" /><path d="M8.53 16.11a6 6 0 0 1 6.95 0" stroke-dasharray="12" class="fx-wifi-3" /><circle cx="12" cy="20" r="1" fill="currentColor" stroke="none" class="fx-wifi-4" />
+</svg>
+                    </div>
+                    <span class="label">hareketli</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'wifi', 'hareketli')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'wifi', 'hareketli')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+            </div>
+            <p class="name">Wi-Fi</p>
+        </article>
+        
+        <article class="item" data-name="konum">
+            <div class="row">
+                <div class="icon-wrap">
+                    <div class="icon-box static-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle>
+</svg>
+</div>
+                    <span class="label">sabit</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'konum', 'sabit')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'konum', 'sabit')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+                <div class="icon-wrap">
+                    <div class="icon-box animated-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>@keyframes kfKonumYatay {
+  0% { transform: scaleX(1); }
+  50% { transform: scaleX(-1); }
+  100% { transform: scaleX(1); }
+}
+.fx-konum-yatay { transform-origin: 50% 50%; transform-box: view-box; animation: kfKonumYatay 1.6s ease-in-out infinite; }
+</style><g class="fx-konum-yatay"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></g>
+</svg>
+                    </div>
+                    <span class="label">hareketli</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'konum', 'hareketli')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'konum', 'hareketli')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+            </div>
+            <p class="name">Konum</p>
+        </article>
+        
+        <article class="item" data-name="yenile">
+            <div class="row">
+                <div class="icon-wrap">
+                    <div class="icon-box static-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+</svg>
+</div>
+                    <span class="label">sabit</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'yenile', 'sabit')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'yenile', 'sabit')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+                <div class="icon-wrap">
+                    <div class="icon-box animated-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>@keyframes kfYenileDon {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.fx-yenile-don { transform-origin: 50% 50%; transform-box: view-box; animation: kfYenileDon 1.5s linear infinite; }
+</style><g class="fx-yenile-don"><polyline points="23 4 23 10 17 10" /><polyline points="1 20 1 14 7 14" /><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" /></g>
+</svg>
+                    </div>
+                    <span class="label">hareketli</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'yenile', 'hareketli')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'yenile', 'hareketli')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+            </div>
+            <p class="name">Yenile</p>
+        </article>
+        
+        <article class="item" data-name="telefon">
+            <div class="row">
+                <div class="icon-wrap">
+                    <div class="icon-box static-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+</svg>
+</div>
+                    <span class="label">sabit</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'telefon', 'sabit')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'telefon', 'sabit')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+                <div class="icon-wrap">
+                    <div class="icon-box animated-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for stroke-dashoffset animation */
+.fx-telefon-legacy-1 { animation: fitzDashTelefon1 2s ease-in-out infinite; animation-delay: 0s; }
+@keyframes fitzDashTelefon1 {
+  0.000% { stroke-dashoffset: 80; }
+  50.000% { stroke-dashoffset: 0; }
+  100.000% { stroke-dashoffset: 80; }
+}
+</style><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke-dasharray="80" class="fx-telefon-legacy-1" stroke-dashoffset="80" />
+</svg>
+                    </div>
+                    <span class="label">hareketli</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'telefon', 'hareketli')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'telefon', 'hareketli')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+            </div>
+            <p class="name">Telefon</p>
+        </article>
+        
+        <article class="item" data-name="goz">
+            <div class="row">
+                <div class="icon-wrap">
+                    <div class="icon-box static-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle>
+</svg>
+</div>
+                    <span class="label">sabit</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'goz', 'sabit')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'goz', 'sabit')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+                <div class="icon-wrap">
+                    <div class="icon-box animated-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for former SMIL animations */
+@keyframes kf-goz-1 {
+  0.000% { cx: 12; }
+  33.333% { cx: 10; }
+  66.667% { cx: 14; }
+  100.000% { cx: 12; }
+}
+.fx-goz-1 { animation: kf-goz-1 3s ease-in-out 0s infinite; }
+
+@keyframes kf-goz-2 {
+  0.000% { opacity: 0; }
+  70.000% { opacity: 0; }
+  75.000% { opacity: 1; }
+  80.000% { opacity: 0; }
+  100.000% { opacity: 0; }
+}
+.fx-goz-2 { animation: kf-goz-2 4s ease-in-out 0s infinite; }
+</style><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" class="fx-goz-1" /><line x1="3" y1="4" x2="21" y2="20" stroke-width="2.5" stroke-linecap="round" class="fx-goz-2" />
+</svg>
+                    </div>
+                    <span class="label">hareketli</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'goz', 'hareketli')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'goz', 'hareketli')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+            </div>
+            <p class="name">Göz</p>
+        </article>
+        
+        <article class="item" data-name="kilit">
+            <div class="row">
+                <div class="icon-wrap">
+                    <div class="icon-box static-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+</svg>
+</div>
+                    <span class="label">sabit</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'kilit', 'sabit')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'kilit', 'sabit')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+                <div class="icon-wrap">
+                    <div class="icon-box animated-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for former SMIL animations */
+@keyframes kf-kilit-1 {
+  0.000% { transform: translateY(0px); }
+  50.000% { transform: translateY(-2px); }
+  100.000% { transform: translateY(0px); }
+}
+.fx-kilit-1 { animation: kf-kilit-1 2s ease-in-out 0s infinite; transform-box: fill-box; }
+
+@keyframes kf-kilit-2 {
+  0.000% { cx: 12; }
+  33.333% { cx: 10; }
+  66.667% { cx: 14; }
+  100.000% { cx: 12; }
+}
+.fx-kilit-2 { animation: kf-kilit-2 2s ease-in-out 0s infinite; }
+</style><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" class="fx-kilit-1" /><circle cx="12" cy="16" r="1.5" fill="currentColor" stroke="none" class="fx-kilit-2" />
+</svg>
+                    </div>
+                    <span class="label">hareketli</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'kilit', 'hareketli')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'kilit', 'hareketli')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+            </div>
+            <p class="name">Kilit</p>
+        </article>
+        
+        <article class="item" data-name="kalkan">
+            <div class="row">
+                <div class="icon-wrap">
+                    <div class="icon-box static-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+</svg>
+</div>
+                    <span class="label">sabit</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'kalkan', 'sabit')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'kalkan', 'sabit')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+                <div class="icon-wrap">
+                    <div class="icon-box animated-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for stroke-dashoffset animation */
+.fx-kalkan-legacy-1 { animation: fitzDashKalkan1 1.5s ease-in-out infinite; animation-delay: 0s; }
+@keyframes fitzDashKalkan1 {
+  0.000% { stroke-dashoffset: 12; }
+  50.000% { stroke-dashoffset: 0; }
+  100.000% { stroke-dashoffset: 12; }
+}
+</style><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><polyline points="9 12 11 14 15 10" stroke-dasharray="12" class="fx-kalkan-legacy-1" stroke-dashoffset="12" />
+</svg>
+                    </div>
+                    <span class="label">hareketli</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'kalkan', 'hareketli')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'kalkan', 'hareketli')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+            </div>
+            <p class="name">Kalkan</p>
+        </article>
+        
+        <article class="item" data-name="gonder">
+            <div class="row">
+                <div class="icon-wrap">
+                    <div class="icon-box static-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+</svg>
+</div>
+                    <span class="label">sabit</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'gonder', 'sabit')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'gonder', 'sabit')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+                <div class="icon-wrap">
+                    <div class="icon-box animated-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for stroke-dashoffset animation */
+.fx-gonder-legacy-1 { animation: fitzDashGonder1 1.5s ease-in-out infinite; animation-delay: 0s; }
+@keyframes fitzDashGonder1 {
+  0.000% { stroke-dashoffset: 16; }
+  50.000% { stroke-dashoffset: 0; }
+  100.000% { stroke-dashoffset: 16; }
+}
+.fx-gonder-legacy-2 { animation: fitzDashGonder2 1.5s ease-in-out infinite; animation-delay: 0s; }
+@keyframes fitzDashGonder2 {
+  0.000% { stroke-dashoffset: 60; }
+  50.000% { stroke-dashoffset: 0; }
+  100.000% { stroke-dashoffset: 60; }
+}
+</style><line x1="22" y1="2" x2="11" y2="13" stroke-dasharray="16" class="fx-gonder-legacy-1" stroke-dashoffset="16" /><polygon points="22 2 15 22 11 13 2 9 22 2" stroke-dasharray="60" class="fx-gonder-legacy-2" stroke-dashoffset="60" />
+</svg>
+                    </div>
+                    <span class="label">hareketli</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'gonder', 'hareketli')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'gonder', 'hareketli')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+            </div>
+            <p class="name">Gönder</p>
+        </article>
+        
+        <article class="item" data-name="mikrofon">
+            <div class="row">
+                <div class="icon-wrap">
+                    <div class="icon-box static-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line>
+</svg>
+</div>
+                    <span class="label">sabit</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'mikrofon', 'sabit')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'mikrofon', 'sabit')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+                <div class="icon-wrap">
+                    <div class="icon-box animated-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for stroke-dashoffset animation */
+.fx-mikrofon-legacy-1 { animation: fitzDashMikrofon1 1.5s ease-in-out infinite; animation-delay: 0s; }
+@keyframes fitzDashMikrofon1 {
+  0.000% { stroke-dashoffset: 35; }
+  50.000% { stroke-dashoffset: 0; }
+  100.000% { stroke-dashoffset: 35; }
+}
+</style><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" stroke-dasharray="35" class="fx-mikrofon-legacy-1" stroke-dashoffset="35" /><path d="M19 10v2a7 7 0 0 1-14 0v-2" /><line x1="12" y1="19" x2="12" y2="23" /><line x1="8" y1="23" x2="16" y2="23" />
+</svg>
+                    </div>
+                    <span class="label">hareketli</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'mikrofon', 'hareketli')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'mikrofon', 'hareketli')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+            </div>
+            <p class="name">Mikrofon</p>
+        </article>
+        
+        <article class="item" data-name="atas">
+            <div class="row">
+                <div class="icon-wrap">
+                    <div class="icon-box static-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path>
+</svg>
+</div>
+                    <span class="label">sabit</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'atas', 'sabit')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'atas', 'sabit')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+                <div class="icon-wrap">
+                    <div class="icon-box animated-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for stroke-dashoffset animation */
+.fx-atas-legacy-1 { animation: fitzDashAtas1 2s ease-in-out infinite; animation-delay: 0s; }
+@keyframes fitzDashAtas1 {
+  0.000% { stroke-dashoffset: 100; }
+  50.000% { stroke-dashoffset: 0; }
+  100.000% { stroke-dashoffset: 100; }
+}
+</style><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48" stroke-dasharray="100" class="fx-atas-legacy-1" stroke-dashoffset="100" />
+</svg>
+                    </div>
+                    <span class="label">hareketli</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'atas', 'hareketli')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'atas', 'hareketli')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+            </div>
+            <p class="name">Ataş</p>
+        </article>
+        
+        <article class="item" data-name="yildiz">
+            <div class="row">
+                <div class="icon-wrap">
+                    <div class="icon-box static-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+</svg>
+</div>
+                    <span class="label">sabit</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'yildiz', 'sabit')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'yildiz', 'sabit')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+                <div class="icon-wrap">
+                    <div class="icon-box animated-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for former SMIL animations */
+@keyframes kf-yildiz-1 {
+  0.000% { transform: rotate(0deg); }
+  33.333% { transform: rotate(10deg); }
+  66.667% { transform: rotate(-10deg); }
+  100.000% { transform: rotate(0deg); }
+}
+.fx-yildiz-1 { animation: kf-yildiz-1 2s ease-in-out 0s infinite; transform-box: fill-box; }
+
+@keyframes kf-yildiz-2 {
+  0.000% { opacity: 0; }
+  30.000% { opacity: 0.4; }
+  60.000% { opacity: 0; }
+  100.000% { opacity: 0; }
+}
+.fx-yildiz-2 { animation: kf-yildiz-2 1.5s ease-in-out 0s infinite; }
+</style><g style="transform-origin: 12px 12px" class="fx-yildiz-1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></g><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor" stroke="none" class="fx-yildiz-2" />
+</svg>
+                    </div>
+                    <span class="label">hareketli</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'yildiz', 'hareketli')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'yildiz', 'hareketli')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+            </div>
+            <p class="name">Yıldız</p>
+        </article>
+        
+        <article class="item" data-name="gunes">
+            <div class="row">
+                <div class="icon-wrap">
+                    <div class="icon-box static-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+</svg>
+</div>
+                    <span class="label">sabit</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'gunes', 'sabit')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'gunes', 'sabit')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+                <div class="icon-wrap">
+                    <div class="icon-box animated-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>@keyframes kfGunesIsinDon {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.fx-gunes-isin { transform-origin: 50% 50%; transform-box: view-box; animation: kfGunesIsinDon 6s linear infinite; }
+</style><circle cx="12" cy="12" r="5" /><g class="fx-gunes-isin"><line x1="12" y1="1" x2="12" y2="3" /><line x1="12" y1="21" x2="12" y2="23" /><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" /><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" /><line x1="1" y1="12" x2="3" y2="12" /><line x1="21" y1="12" x2="23" y2="12" /><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" /><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" /></g>
+</svg>
+                    </div>
+                    <span class="label">hareketli</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'gunes', 'hareketli')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'gunes', 'hareketli')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+            </div>
+            <p class="name">Güneş</p>
+        </article>
+        
+        <article class="item" data-name="ay">
+            <div class="row">
+                <div class="icon-wrap">
+                    <div class="icon-box static-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+</svg>
+</div>
+                    <span class="label">sabit</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'ay', 'sabit')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'ay', 'sabit')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+                <div class="icon-wrap">
+                    <div class="icon-box animated-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for former SMIL animations */
+@keyframes kf-ay-1 {
+  0.000% { opacity: 1; }
+  50.000% { opacity: 0.6; }
+  100.000% { opacity: 1; }
+}
+.fx-ay-1 { animation: kf-ay-1 3s ease-in-out 0s infinite; }
+
+@keyframes kf-ay-2 {
+  0.000% { opacity: 0.1; }
+  50.000% { opacity: 0.3; }
+  100.000% { opacity: 0.1; }
+}
+.fx-ay-2 { animation: kf-ay-2 3s ease-in-out 0s infinite; }
+
+@keyframes kf-ay-3 {
+  0.000% { opacity: 0.2; }
+  50.000% { opacity: 0.6; }
+  100.000% { opacity: 0.2; }
+}
+.fx-ay-3 { animation: kf-ay-3 2s ease-in-out 0s infinite; }
+
+@keyframes kf-ay-4 {
+  0.000% { opacity: 0.1; }
+  50.000% { opacity: 0.4; }
+  100.000% { opacity: 0.1; }
+}
+.fx-ay-4 { animation: kf-ay-4 2.5s ease-in-out 0.5s infinite; }
+</style><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" class="fx-ay-1" /><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor" stroke="none" class="fx-ay-2" /><circle cx="14" cy="8" r="1" fill="currentColor" stroke="none" opacity="0.4" class="fx-ay-3" /><circle cx="17" cy="11" r="0.7" fill="currentColor" stroke="none" opacity="0.3" class="fx-ay-4" />
+</svg>
+                    </div>
+                    <span class="label">hareketli</span>
+                    <div class="mini-actions">
+                        <button onclick="copyIcon(this, 'ay', 'hareketli')" title="Kopyala"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                        <button onclick="downloadIcon(this, 'ay', 'hareketli')" title="İndir"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></button>
+                    </div>
+                </div>
+            </div>
+            <p class="name">Ay</p>
+        </article>
+        
+  </main>
+  <div class="toast" id="toast">Kopyalandı!</div>
+  <script>
+    let currentColor = '#1a1a1a';
+    
+    function setGlobalColor(btn) {
+      document.querySelectorAll('.colors button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentColor = btn.dataset.color;
+      document.documentElement.style.setProperty('--icon-color', currentColor);
+    }
+    
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 2000);
+    }
+    
+    function getProcessedSVG(btn, type) {
+      const wrap = btn.closest('.icon-wrap');
+      const svgContainer = type === 'sabit' ? wrap.querySelector('.static-svg') : wrap.querySelector('.animated-svg');
+      let svgCode = svgContainer.innerHTML;
+      if(currentColor !== '#1a1a1a') {
+        svgCode = svgCode.replace(/stroke="currentColor"/g, 'stroke="' + currentColor + '"');
+        svgCode = svgCode.replace(/fill="currentColor"/g, 'fill="' + currentColor + '"');
+      }
+      return svgCode.trim();
+    }
+
+    function getDisplayName(btn, fallbackName) {
+      const card = btn.closest('.item');
+      const nameEl = card ? card.querySelector('.name') : null;
+      return nameEl ? nameEl.textContent.trim() : fallbackName;
+    }
+
+    function toFileSlug(displayName) {
+      return displayName
+        .toLocaleLowerCase('tr-TR')
+        .replace(/ğ/g, 'g')
+        .replace(/ü/g, 'u')
+        .replace(/ş/g, 's')
+        .replace(/ı/g, 'i')
+        .replace(/ö/g, 'o')
+        .replace(/ç/g, 'c')
+        .replace(/\s+/g, '-')
+        .replace(/[^a-z0-9-]/g, '')
+        .replace(/-+/g, '-')
+        .replace(/^-|-$/g, '');
+    }
+    
+    async function copyIcon(btn, name, type) {
+      const svgCode = getProcessedSVG(btn, type);
+      const displayName = getDisplayName(btn, name);
+      try {
+        await navigator.clipboard.writeText(svgCode);
+        showToast(displayName + ' (' + type + ') kopyalandı!');
+      } catch (e) {
+        showToast('Kopyalama başarısız');
+      }
+    }
+    
+    function downloadIcon(btn, name, type) {
+      const svgCode = getProcessedSVG(btn, type);
+      const displayName = getDisplayName(btn, name);
+      const blob = new Blob([svgCode], {type: 'image/svg+xml'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = toFileSlug(displayName) + '-' + type + '.svg';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      showToast(displayName + ' indirildi!');
+    }
+  </script>
+</body>
+</html>

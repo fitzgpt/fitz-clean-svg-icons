@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>/* CSS fallback for former SMIL animations */
+@keyframes kf-indir-1 {
+  0.000% { transform: translate(0px, 0px); }
+  33.333% { transform: translate(0px, 0px); }
+  66.667% { transform: translate(0px, 1.3333px); }
+  100.000% { transform: translate(0px, 0px); }
+}
+.fx-indir-1 { animation: kf-indir-1 1.5s ease-in-out 0s infinite; transform-box: fill-box; }
+
+@keyframes kf-indir-2 {
+  0.000% { y1: 15; }
+  50.000% { y1: 8; }
+  100.000% { y1: 15; }
+}
+.fx-indir-2 { animation: kf-indir-2 1s ease-in-out 0s infinite; }
+</style><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" class="fx-indir-1" /><line x1="12" y1="15" x2="12" y2="3" class="fx-indir-2" />
+</svg>

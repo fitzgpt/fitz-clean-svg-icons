@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>@keyframes kfMenuTop {
+  0%, 100% { transform: scaleX(1); }
+  50% { transform: scaleX(0.62); }
+}
+@keyframes kfMenuMid {
+  0%, 100% { transform: scaleX(1); }
+  50% { transform: scaleX(0.76); }
+}
+@keyframes kfMenuBottom {
+  0%, 100% { transform: scaleX(1); }
+  50% { transform: scaleX(0.45); }
+}
+.fx-menu-top { transform-origin: left center; transform-box: fill-box; animation: kfMenuTop 1.9s ease-in-out infinite; }
+.fx-menu-mid { transform-origin: right center; transform-box: fill-box; animation: kfMenuMid 1.9s ease-in-out .08s infinite; }
+.fx-menu-bottom { transform-origin: left center; transform-box: fill-box; animation: kfMenuBottom 1.9s ease-in-out .16s infinite; }
+</style><line x1="3" y1="6" x2="21" y2="6" class="fx-menu-top" /><line x1="3" y1="12" x2="21" y2="12" class="fx-menu-mid" /><line x1="3" y1="18" x2="21" y2="18" class="fx-menu-bottom" />
+</svg>
