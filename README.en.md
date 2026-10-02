@@ -8,11 +8,16 @@ A clean, fast, production-ready SVG icon collection for modern interfaces.
 
 ## Install
 
-```bash
-npm install @fitzgpt/fitz-clean-svg-icons
+**1) Copy into your project** — [download the repo](https://github.com/fitzgpt/fitz-clean-svg-icons/archive/refs/tags/v0.2.0.zip) (ZIP) or clone it, then take the `static/` or `animated/` folder. Files are standalone, zero dependencies.
+
+**2) CDN (no copying)** — hotlink the file directly:
+
+```
+https://cdn.jsdelivr.net/gh/fitzgpt/fitz-clean-svg-icons@v0.2.0/static/search.svg
+https://cdn.jsdelivr.net/gh/fitzgpt/fitz-clean-svg-icons@v0.2.0/animated/search.svg
 ```
 
-CDN (versioned): `https://cdn.jsdelivr.net/npm/@fitzgpt/fitz-clean-svg-icons@0.2.0/static/search.svg`
+> npm publishing coming soon — once live, `npm install @fitzgpt/fitz-clean-svg-icons` is all it takes.
 
 ## Usage
 
@@ -68,8 +73,9 @@ Old → new mapping: [aliases.json](aliases.json)
 - [x] MIT license
 - [x] `prefers-reduced-motion` support (87/87)
 - [x] English canonical filenames + aliases.json
-- [x] npm package + sprite + CI validation
+- [x] npm packaging + sprite + CI validation
 - [x] 87 icons + 4 categories + showcase filter + TR/EN preview (v0.2.0)
+- [ ] npm registry publish
 - [ ] 120 core icons (v1.0 goal)
 - [ ] Figma matching file
 

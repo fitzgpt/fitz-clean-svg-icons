@@ -8,11 +8,16 @@ Modern arayüzler için sade, hızlı ve üretime uygun SVG ikon koleksiyonu.
 
 ## Kurulum
 
-```bash
-npm install @fitzgpt/fitz-clean-svg-icons
+**1) Projene kopyala** — [repoyu indir](https://github.com/fitzgpt/fitz-clean-svg-icons/archive/refs/tags/v0.2.0.zip) (ZIP) veya klonla; `static/` ya da `animated/` klasörünü projene al. Dosyalar bağımsız çalışır, bağımlılık yok.
+
+**2) CDN (kopyalamadan kullan)** — dosyayı doğrudan linkten çek:
+
+```
+https://cdn.jsdelivr.net/gh/fitzgpt/fitz-clean-svg-icons@v0.2.0/static/search.svg
+https://cdn.jsdelivr.net/gh/fitzgpt/fitz-clean-svg-icons@v0.2.0/animated/search.svg
 ```
 
-CDN (sürümlü): `https://cdn.jsdelivr.net/npm/@fitzgpt/fitz-clean-svg-icons@0.2.0/static/search.svg`
+> npm yayını yakında — hazır olduğunda `npm install @fitzgpt/fitz-clean-svg-icons` tek satır yeter.
 
 ## Kullanım
 
@@ -66,8 +71,9 @@ Eski → yeni eşleme: [aliases.json](aliases.json)
 - [x] MIT lisans
 - [x] `prefers-reduced-motion` desteği (87/87)
 - [x] İngilizce kanonik dosya adları + aliases.json
-- [x] npm paketi + sprite + CI doğrulama
+- [x] npm paketleme + sprite + CI doğrulama
 - [x] 87 ikon + 4 kategori + vitrin filtresi + TR/EN önizleme (v0.2.0)
+- [ ] npm yayını (npmjs.com)
 - [ ] 120 çekirdek ikon (v1.0 hedefi)
 - [ ] Figma eşleştirme dosyası
 
