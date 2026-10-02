@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fitz Clean SVG Icons</title>
+<meta name="description" content="87 statik + 87 hareketli SVG ikon seti. currentColor, CSS animasyon, MIT. Kategoriler, arama, TR/EN vitrin.">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#060607">
+<meta property="og:title" content="Fitz Clean SVG Icons">
+<meta property="og:description" content="87 static + 87 animated SVG icons. currentColor, CSS animation, MIT.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%23060607'/%3E%3Cpath d='M8 17V7h9M8 12h6' stroke='%2334d399' stroke-width='2.4' stroke-linecap='round' fill='none'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#060607; --shell:rgba(255,255,255,.028); --card:rgba(255,255,255,.045);
+  --line:rgba(255,255,255,.07); --hair:rgba(255,255,255,.16);
+  --fg:#f5f5f6; --muted:#91919c; --icon:#f5f5f6; --accent:#34d399; --card2:rgba(255,255,255,.035);
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+body.light{
+  --bg:#f7f7f8; --shell:rgba(0,0,0,.025); --card:#fff;
+  --line:rgba(0,0,0,.06); --hair:rgba(0,0,0,.16);
+  --fg:#131315; --muted:#70707a; --icon:#131315; --card2:#ffffff;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Plus Jakarta Sans",ui-sans-serif,system-ui,sans-serif;
+  background:var(--bg); color:var(--fg); min-height:100dvh;
+  padding:3.2rem 1.5rem 4rem; position:relative; overflow-x:hidden;
+  transition:background .5s var(--ease), color .5s var(--ease);
+}
+body::before,body::after{
+  content:""; position:fixed; border-radius:50%; pointer-events:none; z-index:0;
+  filter:blur(130px); opacity:.14;
+}
+body::before{width:580px;height:580px;top:-190px;right:-130px;background:radial-gradient(circle,#34d399,transparent 70%)}
+body::after{width:500px;height:500px;bottom:-170px;left:-130px;background:radial-gradient(circle,#818cf8,transparent 70%)}
+body.light::before{opacity:.09} body.light::after{opacity:.07}
+
+::selection{ background:rgba(52,211,153,.25); }
+:focus-visible{ outline:2px solid var(--hair); outline-offset:2px; border-radius:.4rem; }
+::-webkit-scrollbar{ width:10px; height:10px; }
+::-webkit-scrollbar-thumb{ background:var(--line); border-radius:5px; border:2px solid var(--bg); }
+::-webkit-scrollbar-thumb:hover{ background:var(--hair); }
+
+.shell{ max-width:1150px; margin:0 auto; position:relative; z-index:1; }
+
+.top{
+  display:flex; justify-content:space-between; align-items:center; gap:1rem;
+  margin-bottom:2.2rem; flex-wrap:wrap;
+}
+.x-box{
+  display:inline-flex; align-items:center; gap:.65rem;
+  text-decoration:none; color:var(--fg);
+  background:var(--shell); border:1px solid var(--line); border-radius:.9rem;
+  padding:.6rem 1rem;
+  transition:border-color .3s var(--ease), transform .3s var(--ease), background .3s var(--ease);
+}
+.x-box:hover{ border-color:var(--hair); transform:translateY(-2px); background:var(--card); }
+.x-box .x-glyph{
+  font-weight:800; font-size:.85rem; width:1.7rem; height:1.7rem;
+  display:flex; align-items:center; justify-content:center;
+  border:1px solid var(--hair); border-radius:.55rem;
+}
+.x-box .x-text{ display:flex; flex-direction:column; line-height:1.25; }
+.x-box .x-text b{ font-size:.8rem; font-weight:700; }
+.x-box .x-text span{ font-size:.68rem; color:var(--muted); }
+.x-box .x-arrow{ color:var(--muted); font-size:.85rem; transition:transform .3s var(--ease), color .3s var(--ease); }
+.x-box:hover .x-arrow{ transform:translate(2px,-2px); color:var(--fg); }
+
+h1{
+  font-size:clamp(2rem,4.5vw,3.2rem); font-weight:800; letter-spacing:-.04em;
+  line-height:1.04; margin-bottom:.55rem; text-wrap:balance;
+}
+.sub{ color:var(--muted); font-size:.95rem; line-height:1.65; max-width:36rem; }
+
+.bar{
+  margin-top:2.1rem; display:flex; flex-wrap:wrap; gap:.55rem; align-items:center;
+  background:var(--shell); border:1px solid var(--line); border-radius:1rem;
+  padding:.55rem .6rem; backdrop-filter:blur(16px);
+  transition:border-color .5s var(--ease);
+}
+.bar:focus-within{ border-color:var(--hair); }
+.bar input[type=search]{
+  flex:1; min-width:10.5rem; background:none; border:none; outline:none;
+  color:var(--fg); font-size:.9rem; padding:.25rem .55rem;
+}
+.bar input[type=search]::placeholder{ color:var(--muted); }
+.bar .sep{ width:1px; height:1.5rem; background:var(--line); }
+.chip{
+  cursor:pointer; border:1px solid var(--line); border-radius:999px;
+  padding:.42rem .85rem; background:transparent; color:var(--muted);
+  font-size:.76rem; font-weight:600; font-family:inherit;
+  transition:all .25s var(--ease);
+}
+.chip:hover{ color:var(--fg); border-color:var(--hair); transform:translateY(-1px); }
+.chip.on{ color:var(--bg); background:var(--fg); border-color:var(--fg); }
+.lang{ display:flex; border:1px solid var(--line); border-radius:.6rem; overflow:hidden; }
+.lang button{
+  background:none; border:none; color:var(--muted); cursor:pointer;
+  font-size:.72rem; font-weight:700; padding:.35rem .6rem; font-family:inherit;
+  transition:all .2s var(--ease);
+}
+.lang button.on{ color:var(--fg); background:var(--card2); }
+.bar input[type=color]{
+  width:1.95rem; height:1.95rem; border:1px solid var(--line); border-radius:.6rem;
+  background:transparent; padding:.18rem; cursor:pointer;
+  transition:border-color .25s var(--ease), transform .25s var(--ease);
+}
+.bar input[type=color]:hover{ border-color:var(--hair); transform:translateY(-1px); }
+.bar input[type=color]::-webkit-color-swatch-wrapper{ padding:0 }
+.bar input[type=color]::-webkit-color-swatch{ border:none; border-radius:.4rem }
+#mode{ font-size:.82rem; padding:.28rem .65rem; line-height:1; }
+
+.count{ margin:1.5rem 0 .5rem; font-size:.72rem; color:var(--muted); font-family:"JetBrains Mono",ui-monospace,monospace; letter-spacing:.04em; }
+
+.setgrid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(232px,1fr)); gap:1rem; }
+.setlabel{ margin:2.2rem 0 .8rem; font-size:.7rem; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); font-weight:600; }
+#grid > .setlabel:first-child{ margin-top:.5rem; }
+@keyframes cardRise{ from{ opacity:0; transform:translateY(14px); } to{ opacity:1; transform:translateY(0); } }
+.card{
+  background:var(--shell); border:1px solid var(--line); border-radius:1.2rem;
+  padding:.45rem;
+  transition:transform .3s var(--ease), border-color .3s var(--ease), background .3s var(--ease);
+}
+.anim .card{ animation:cardRise .5s var(--ease) both; animation-delay:calc(var(--i,0) * 32ms); }
+.card:hover{ transform:translateY(-3px); border-color:var(--hair); }
+.card.paused .stage svg, .card.paused .stage svg *{ animation-play-state:paused !important; }
+.inner{
+  background:var(--card2); border:1px solid var(--line); border-radius:calc(1.2rem - .35rem);
+  padding:.9rem .8rem .7rem;
+}
+.stage{
+  display:flex; gap:1.3rem; align-items:center; justify-content:center;
+  min-height:54px; padding:.65rem .5rem; border-radius:.65rem;
+  background:radial-gradient(circle at 50% 130%, var(--shell), transparent 75%);
+  color:var(--icon); transition:color .3s var(--ease);
+}
+.stage svg{ width:30px; height:30px; display:block; transition:transform .3s var(--ease); }
+.card:hover .stage svg{ transform:scale(1.08); }
+.stage figure{ display:flex; flex-direction:column; align-items:center; gap:.5rem; }
+.stage figcaption{ font-size:.6rem; color:var(--muted); letter-spacing:.08em; text-transform:uppercase; font-family:"JetBrains Mono",ui-monospace,monospace; }
+.name{ display:flex; align-items:center; justify-content:space-between; margin-top:.7rem; padding:0 .1rem; }
+.name span{ font-family:"JetBrains Mono",ui-monospace,monospace; font-size:.68rem; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; min-width:0; }
+.cat{ font-size:.55rem; color:var(--muted); border:1px solid var(--line); border-radius:999px; padding:.1rem .45rem; margin-left:.4rem; flex-shrink:0; }
+.dl{ display:flex; gap:.4rem; margin-top:.55rem; }
+.dl button{
+  flex:1; background:transparent; border:1px solid var(--line); border-radius:.55rem;
+  color:var(--muted); font-size:.64rem; padding:.36rem 0; cursor:pointer; font-weight:600;
+  transition:all .2s var(--ease); font-family:inherit;
+}
+.dl button:hover{ color:var(--fg); border-color:var(--hair); transform:translateY(-1px); }
+.dl button:active{ transform:translateY(0) scale(.97); }
+.dl button.ok{ color:var(--accent); border-color:color-mix(in srgb, var(--accent) 40%, var(--line)); }
+.empty{ text-align:center; color:var(--muted); padding:3.5rem 0 4rem; font-size:.9rem; }
+footer{ max-width:1150px; margin:2.6rem auto 0; font-size:.7rem; color:var(--muted); font-family:"JetBrains Mono",ui-monospace,monospace; display:flex; gap:.5rem; flex-wrap:wrap; }
+footer a{ color:var(--muted); transition:color .2s var(--ease); }
+footer a:hover{ color:var(--fg); }
+@media (prefers-reduced-motion: reduce){
+  .anim .card{ animation:none; }
+  .card:hover, .x-box:hover, .chip:hover, .bar input[type=color]:hover, .dl button:hover{ transform:none; }
+  .card:hover .stage svg{ transform:none; }
+  html{ scroll-behavior:auto; }
+  *,*::before,*::after{ transition-duration:.15s !important; }
+}
+@media (pointer:coarse){
+  .chip{ padding:.55rem 1rem; }
+  .lang button{ padding:.5rem .7rem; }
+  .dl button{ padding:.55rem 0; font-size:.7rem; }
+}
+@media (max-width:768px){ body{padding:2.2rem 1rem 3rem} .setgrid{grid-template-columns:repeat(auto-fill,minmax(165px,1fr))} }
+</style>
+</head>
+<body>
+<div class="shell">
+  <div class="top">
+    <h1 style="margin:0">Fitz Clean SVG Icons<span id="h-count" style="color:var(--muted)"></span></h1>
+    <a class="x-box" href="https://x.com/fitzgpt" target="_blank" rel="noopener">
+      <span class="x-glyph">𝕏</span>
+      <span class="x-text"><b>@fitzgpt</b><span id="x-sub">agentic AI notları</span></span>
+      <span class="x-arrow">↗</span>
+    </a>
+  </div>
+  <p class="sub" id="sub">currentColor tabanlı, CSS animasyonlu, sıfır bağımlılık. Tarayıcında canlı renklendir, kopyala, indir.</p>
+
+  <div class="bar">
+    <input id="q" type="search" placeholder="İkon ara…" aria-label="İkon ara">
+    <span class="sep"></span>
+    <button class="chip on" data-f="all">tümü</button>
+    <button class="chip" data-f="gezinti">gezinti</button>
+    <button class="chip" data-f="eylem">eylem</button>
+    <button class="chip" data-f="medya">medya</button>
+    <button class="chip" data-f="e-ticaret">e-ticaret</button>
+    <span class="sep"></span>
+    <div class="lang" role="group" aria-label="Dil">
+      <button class="on" data-lang="tr">TR</button>
+      <button data-lang="en">EN</button>
+    </div>
+    <span class="sep"></span>
+    <input type="color" id="color" value="#f5f5f6" aria-label="İkon rengi" title="İkon rengi">
+    <button class="chip" id="mode" title="Tema değiştir" aria-label="Tema değiştir">☀</button>
+  </div>
+
+  <div class="count" id="count"></div>
+  <div class="grid" id="grid"></div>
+  <div class="empty" id="empty" hidden>Eşleşen ikon yok.</div>
+  <footer>MIT · <a href="https://github.com/fitzgpt/fitz-clean-svg-icons">fitzgpt/fitz-clean-svg-icons</a> · v0.2.0 · <span id="foot-label"></span></footer>
+</div>
+<script>
+const NAMES = __ICONS_DATA__;
+const CAT = __CAT_MAP__;
+const S = __SVG_STATIC__;
+const A = __SVG_ANIMATED__;
+const L = {
+  tr:{ search:"İkon ara…", color:"ikon rengi", all:"tümü",
+       cat:{gezinti:"gezinti",eylem:"eylem",medya:"medya","e-ticaret":"e-ticaret"},
+       stat:"sabit", anim:"hareketli", copy:"kopyala", copied:"kopyalandı ✓",
+       dls:"↓ sabit", dla:"↓ hareketli", none:"Eşleşen ikon yok.",
+       xsub:"agentic AI notları",
+       sub:"currentColor tabanlı, CSS animasyonlu, sıfır bağımlılık. Tarayıcında canlı renklendir, kopyala, indir.",
+       countLabel:"ikon", foot:"build çıktısı", theme:"Tema değiştir" },
+  en:{ search:"Search icons…", color:"icon color", all:"all",
+       cat:{gezinti:"navigation",eylem:"actions",medya:"media","e-ticaret":"commerce"},
+       stat:"static", anim:"animated", copy:"copy", copied:"copied ✓",
+       dls:"↓ static", dla:"↓ animated", none:"No matching icons.",
+       xsub:"agentic AI notes",
+       sub:"currentColor-based, CSS-animated, zero dependencies. Tint, copy and download live in your browser.",
+       countLabel:"icons", foot:"build output", theme:"Toggle theme" }
+};
+let lang = 'tr', filter = 'all', staged = true, customColor = false;
+const grid = document.getElementById('grid');
+const q = document.getElementById('q');
+const T = () => L[lang];
+const io = 'IntersectionObserver' in window ? new IntersectionObserver(entries => {
+  for (const en of entries) en.target.classList.toggle('paused', !en.isIntersecting);
+}, { rootMargin: '150px 0px' }) : null;
+function observeCards(){
+  if (!io) return;
+  io.disconnect();
+  grid.querySelectorAll('.card').forEach(c => io.observe(c));
+}
+function render(){
+  const t = T();
+  const v = q.value.trim().toLowerCase();
+  const list = NAMES.filter(n => (filter==='all'||CAT[n]===filter) && (!v || n.toLowerCase().includes(v)));
+  document.getElementById('count').textContent = list.length + ' / ' + NAMES.length;
+  document.getElementById('empty').hidden = list.length > 0;
+  document.getElementById('empty').textContent = t.none;
+  document.getElementById('sub').textContent = t.sub;
+  document.getElementById('h-count').textContent = ' — ' + NAMES.length + ' ' + t.countLabel;
+  document.getElementById('x-sub').textContent = t.xsub;
+  document.getElementById('foot-label').textContent = t.foot;
+  const ci = document.getElementById('color'); if (ci) ci.title = t.color;
+  const mb = document.getElementById('mode'); if (mb) mb.title = t.theme;
+  q.placeholder = t.search;
+  document.querySelectorAll('.chip[data-f]').forEach(c => { c.textContent = c.dataset.f === 'all' ? t.all : (t.cat[c.dataset.f] || c.dataset.f); });
+  document.documentElement.lang = lang;
+  const order = ['gezinti','eylem','medya','e-ticaret'];
+  const groups = {};
+  for (const n of list) (groups[CAT[n]] = groups[CAT[n]] || []).push(n);
+  let html = '';
+  for (const c of order.concat(Object.keys(groups).filter(k => !order.includes(k)))){
+    const items = groups[c]; if (!items || !items.length) continue;
+    html += `<div class="setlabel">${t.cat[c]||c}</div><div class="setgrid">`;
+    items.forEach((n, i) => {
+      html += `<div class="card" style="--i:${Math.min(i,9)}"><div class="inner">
+        <div class="stage"><figure>${S[n]}<figcaption>${t.stat}</figcaption></figure>
+        <figure>${A[n]}<figcaption>${t.anim}</figcaption></figure></div>
+        <div class="name"><span>${n}</span><span class="cat">${t.cat[c]||c}</span></div>
+        <div class="dl"><button data-copy="${n}">${t.copy}</button>
+        <button data-dl="static" data-n="${n}" title="${n}-static.svg">${t.dls}</button>
+        <button data-dl="animated" data-n="${n}" title="${n}-animated.svg">${t.dla}</button></div>
+      </div></div>`;
+    });
+    html += '</div>';
+  }
+  grid.classList.toggle('anim', staged);
+  staged = false;
+  grid.innerHTML = html;
+  observeCards();
+}
+q.addEventListener('input', render);
+document.getElementById('color')?.addEventListener('input', e => {
+  customColor = true;
+  document.documentElement.style.setProperty('--icon', e.target.value);
+});
+document.getElementById('mode')?.addEventListener('click', e => {
+  const light = document.body.classList.toggle('light');
+  e.currentTarget.textContent = light ? '☾' : '☀';
+  if (!customColor){ const ci = document.getElementById('color'); if (ci) ci.value = light ? '#131315' : '#f5f5f6'; }
+});
+document.querySelectorAll('.chip[data-f]').forEach(c => c.addEventListener('click', () => {
+  document.querySelectorAll('.chip[data-f]').forEach(x => x.classList.remove('on'));
+  c.classList.add('on'); filter = c.dataset.f; staged = true; render();
+}));
+document.querySelectorAll('.lang button').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('.lang button').forEach(x => x.classList.remove('on'));
+  b.classList.add('on'); lang = b.dataset.lang; render();
+}));
+grid.addEventListener('click', async e => {
+  const b = e.target.closest('button'); if (!b) return;
+  if (b.dataset.copy) {
+    try {
+      await navigator.clipboard.writeText(S[b.dataset.copy]);
+      const old = b.textContent;
+      b.textContent = T().copied;
+      b.classList.add('ok');
+      setTimeout(() => { b.textContent = old; b.classList.remove('ok'); }, 1200);
+    } catch (err) {}
+    return;
+  }
+  const n = b.dataset.n; if (!n) return;
+  const svg = b.dataset.dl === 'static' ? S[n] : A[n];
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([svg], { type: 'image/svg+xml' }));
+  a.download = n + (b.dataset.dl === 'static' ? '-static.svg' : '-animated.svg');
+  a.click(); URL.revokeObjectURL(a.href);
+});
+render();
+</script>
+</body>
+</html>

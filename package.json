@@ -1,0 +1,34 @@
+{
+  "name": "@fitzgpt/fitz-clean-svg-icons",
+  "version": "0.2.0",
+  "description": "Modern arayüzler için sade, hızlı ve üretime uygun SVG ikon koleksiyonu — 56 statik & 56 animated",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fitzgpt/fitz-clean-svg-icons.git"
+  },
+  "files": [
+    "static/",
+    "animated/",
+    "sprite.svg",
+    "icons.json",
+    "aliases.json",
+    "LICENSE"
+  ],
+  "keywords": [
+    "svg",
+    "icons",
+    "animated-icons",
+    "icon-set",
+    "css-animations",
+    "turkish"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/build.mjs --check"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,8 @@
+<svg class="fx-anim-wallet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>
+.fx-anim-wallet path{ stroke-dasharray:100; stroke-dashoffset:100; animation: fitz-draw-wallet 2.4s ease-in-out infinite; }
+@keyframes fitz-draw-wallet{ 0%{stroke-dashoffset:100;} 40%{stroke-dashoffset:0;} 60%{stroke-dashoffset:0;} 100%{stroke-dashoffset:100;} }
+@media (prefers-reduced-motion: reduce){ .fx-anim-wallet path{ animation:none !important; stroke-dasharray:none !important; stroke-dashoffset:0 !important; } }
+  </style>
+<path d="M20 7H4a2 2 0 0 1 0-4h12v4" pathLength="100"/><path d="M22 9v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5" pathLength="100"/><path d="M16 13a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" pathLength="100"/>
+</svg>

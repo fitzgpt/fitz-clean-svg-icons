@@ -1,0 +1,8 @@
+<svg class="fx-anim-film" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>
+.fx-anim-film path{ stroke-dasharray:100; stroke-dashoffset:100; animation: fitz-draw-film 2.4s ease-in-out infinite; }
+@keyframes fitz-draw-film{ 0%{stroke-dashoffset:100;} 40%{stroke-dashoffset:0;} 60%{stroke-dashoffset:0;} 100%{stroke-dashoffset:100;} }
+@media (prefers-reduced-motion: reduce){ .fx-anim-film path{ animation:none !important; stroke-dasharray:none !important; stroke-dashoffset:0 !important; } }
+  </style>
+<path d="M23 7l-7 5 7 5V7z" pathLength="100"/><path d="M1 5h15v14H1z" pathLength="100"/><path d="M8 2v4" pathLength="100"/><path d="M8 10v4" pathLength="100"/><path d="M8 18v4" pathLength="100"/><path d="M1 8h4" pathLength="100"/><path d="M1 16h4" pathLength="100"/>
+</svg>

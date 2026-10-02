@@ -1,0 +1,8 @@
+<svg class="fx-anim-pause" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>
+.fx-anim-pause path{ stroke-dasharray:100; stroke-dashoffset:100; animation: fitz-draw-pause 2.4s ease-in-out infinite; }
+@keyframes fitz-draw-pause{ 0%{stroke-dashoffset:100;} 40%{stroke-dashoffset:0;} 60%{stroke-dashoffset:0;} 100%{stroke-dashoffset:100;} }
+@media (prefers-reduced-motion: reduce){ .fx-anim-pause path{ animation:none !important; stroke-dasharray:none !important; stroke-dashoffset:0 !important; } }
+  </style>
+<path d="M6 4h4v16H6z" pathLength="100"/><path d="M14 4h4v16h-4z" pathLength="100"/>
+</svg>

@@ -1,0 +1,8 @@
+<svg class="fx-anim-arrow-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fx-draw-arrow-left">
+  <style>
+.fx-anim-arrow-left path{ stroke-dasharray:100; stroke-dashoffset:100; animation: fitz-draw-arrow-left 2.4s ease-in-out infinite; }
+@keyframes fitz-draw-arrow-left{ 0%{stroke-dashoffset:100;} 40%{stroke-dashoffset:0;} 60%{stroke-dashoffset:0;} 100%{stroke-dashoffset:100;} }
+@media (prefers-reduced-motion: reduce){ .fx-anim-arrow-left path{ animation:none !important; stroke-dasharray:none !important; stroke-dashoffset:0 !important; } }
+  </style>
+<path d="M19 12H5" pathLength="100"/><path d="M12 19l-7-7 7-7" pathLength="100"/>
+</svg>

@@ -1,0 +1,8 @@
+<svg class="fx-anim-navigation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>
+.fx-anim-navigation path{ stroke-dasharray:100; stroke-dashoffset:100; animation: fitz-draw-navigation 2.4s ease-in-out infinite; }
+@keyframes fitz-draw-navigation{ 0%{stroke-dashoffset:100;} 40%{stroke-dashoffset:0;} 60%{stroke-dashoffset:0;} 100%{stroke-dashoffset:100;} }
+@media (prefers-reduced-motion: reduce){ .fx-anim-navigation path{ animation:none !important; stroke-dasharray:none !important; stroke-dashoffset:0 !important; } }
+  </style>
+<path d="M3 11l19-9-9 19-2-8-8-2z" pathLength="100"/>
+</svg>

@@ -1,0 +1,8 @@
+<svg class="fx-anim-volume-x" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>
+.fx-anim-volume-x path{ stroke-dasharray:100; stroke-dashoffset:100; animation: fitz-draw-volume-x 2.4s ease-in-out infinite; }
+@keyframes fitz-draw-volume-x{ 0%{stroke-dashoffset:100;} 40%{stroke-dashoffset:0;} 60%{stroke-dashoffset:0;} 100%{stroke-dashoffset:100;} }
+@media (prefers-reduced-motion: reduce){ .fx-anim-volume-x path{ animation:none !important; stroke-dasharray:none !important; stroke-dashoffset:0 !important; } }
+  </style>
+<path d="M11 5L6 9H2v6h4l5 4V5z" pathLength="100"/><path d="M23 9l-6 6" pathLength="100"/><path d="M17 9l6 6" pathLength="100"/>
+</svg>

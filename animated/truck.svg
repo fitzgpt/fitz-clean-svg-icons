@@ -1,0 +1,8 @@
+<svg class="fx-anim-truck" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>
+.fx-anim-truck path{ stroke-dasharray:100; stroke-dashoffset:100; animation: fitz-draw-truck 2.4s ease-in-out infinite; }
+@keyframes fitz-draw-truck{ 0%{stroke-dashoffset:100;} 40%{stroke-dashoffset:0;} 60%{stroke-dashoffset:0;} 100%{stroke-dashoffset:100;} }
+@media (prefers-reduced-motion: reduce){ .fx-anim-truck path{ animation:none !important; stroke-dasharray:none !important; stroke-dashoffset:0 !important; } }
+  </style>
+<path d="M1 3h15v13H1z" pathLength="100"/><path d="M16 8h4l3 3v5h-7V8z" pathLength="100"/><path d="M5.5 19a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" pathLength="100"/><path d="M18.5 19a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" pathLength="100"/>
+</svg>

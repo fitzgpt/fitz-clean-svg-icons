@@ -1,0 +1,8 @@
+<svg class="fx-anim-tag" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>
+.fx-anim-tag path{ stroke-dasharray:100; stroke-dashoffset:100; animation: fitz-draw-tag 2.4s ease-in-out infinite; }
+@keyframes fitz-draw-tag{ 0%{stroke-dashoffset:100;} 40%{stroke-dashoffset:0;} 60%{stroke-dashoffset:0;} 100%{stroke-dashoffset:100;} }
+@media (prefers-reduced-motion: reduce){ .fx-anim-tag path{ animation:none !important; stroke-dasharray:none !important; stroke-dashoffset:0 !important; } }
+  </style>
+<path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.83z" pathLength="100"/><path d="M7 7a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z" pathLength="100"/>
+</svg>

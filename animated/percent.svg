@@ -1,0 +1,8 @@
+<svg class="fx-anim-percent" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <style>
+.fx-anim-percent path{ stroke-dasharray:100; stroke-dashoffset:100; animation: fitz-draw-percent 2.4s ease-in-out infinite; }
+@keyframes fitz-draw-percent{ 0%{stroke-dashoffset:100;} 40%{stroke-dashoffset:0;} 60%{stroke-dashoffset:0;} 100%{stroke-dashoffset:100;} }
+@media (prefers-reduced-motion: reduce){ .fx-anim-percent path{ animation:none !important; stroke-dasharray:none !important; stroke-dashoffset:0 !important; } }
+  </style>
+<path d="M19 5L5 19" pathLength="100"/><path d="M6.5 6.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" pathLength="100"/><path d="M20.5 17.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" pathLength="100"/>
+</svg>
