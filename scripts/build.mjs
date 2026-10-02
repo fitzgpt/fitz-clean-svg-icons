@@ -5,6 +5,7 @@
 //   node scripts/build.mjs --check    → yalnızca doğrulama (CI), çıktı üretmez
 import { readdirSync, readFileSync, writeFileSync, mkdirSync, rmSync, copyFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
+import { generateBanner } from './banner.mjs';
 
 const CHECK_ONLY = process.argv.includes('--check');
 const FAIL = (msg) => { console.error(`HATA: ${msg}`); process.exit(1); };
@@ -54,7 +55,12 @@ if (errors.length) { errors.forEach(e => console.error('HATA:', e)); process.exi
 console.log(`doğrulama: ${icons.length} ikon, simetrik ✅`);
 
 // ---------- --check modu: yalnız doğrula ----------
-if (CHECK_ONLY) { console.log('--check: temiz'); process.exit(0); }
+if (CHECK_ONLY) {
+  if (!existsSync('banner.svg') || readFileSync('banner.svg', 'utf8') !== generateBanner())
+    FAIL('banner.svg güncel değil — `node scripts/build.mjs` çalıştırın');
+  console.log('--check: temiz');
+  process.exit(0);
+}
 
 // ---------- üret ----------
 const spriteParts = statics.map(f => {
@@ -82,6 +88,9 @@ const preview = tmpl
   .replace('__SVG_ANIMATED__', JSON.stringify(animatedSvg))
   .replace('__CAT_MAP__', JSON.stringify(cat));
 writeFileSync('preview.html', preview, 'utf8');
+
+// ---------- banner (README kapağı) ----------
+writeFileSync('banner.svg', generateBanner(), 'utf8');
 
 // ---------- dist ----------
 rmSync('dist', { recursive: true, force: true });

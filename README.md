@@ -1,3 +1,5 @@
+<p align="center"><img src="banner.svg" alt="Fitz Clean SVG Icons — 12 ikon sırayla çizilir, bekler ve geri sarar" width="900"></p>
+
 # Fitz Clean SVG Icons
 
 Modern arayüzler için sade, hızlı ve üretime uygun SVG ikon koleksiyonu.

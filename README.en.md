@@ -1,3 +1,5 @@
+<p align="center"><img src="banner.svg" alt="Fitz Clean SVG Icons — 12 icons draw in sequence, hold, and reverse" width="900"></p>
+
 # Fitz Clean SVG Icons
 
 A clean, fast, production-ready SVG icon collection for modern interfaces.
